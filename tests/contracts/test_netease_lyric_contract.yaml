@@ -1,0 +1,873 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - music.163.com
+      referer:
+      - https://music.163.com/
+    method: GET
+    uri: https://music.163.com/api/cloudsearch/pc?s=viva+la+vida+coldplay&type=1&limit=30&offset=0
+  response:
+    body:
+      string: "{\"result\": {\"songs\": [{\"no\": 7, \"rt\": \"600902000003619068\",
+        \"copyright\": 1, \"fee\": 1, \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\":
+        \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\",
+        \"maxBrLevel\": \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\":
+        3986017, \"sp\": 7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\":
+        [{\"rate\": 128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\":
+        1}, {\"rate\": 320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\":
+        1}], \"freeTrialPrivilege\": {\"userConsumable\": false, \"resConsumable\":
+        true, \"cannotListenReason\": 1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\":
+        \"lossless\", \"cp\": 0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\",
+        \"cs\": false, \"toast\": false, \"playMaxbr\": 999000, \"flLevel\": \"none\",
+        \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\": 100.0, \"dt\": 242373, \"rtype\":
+        0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\": true, \"id\": 3986017,
+        \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346, \"vd\": -47393.0,
+        \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\": 1213632000007,
+        \"cf\": \"\", \"originCoverType\": 1, \"h\": {\"br\": 320000, \"fid\": 0,
+        \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 376215, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/Wr13D68yaaknFmxTD5xnoQ==/18569651881855121.jpg\",
+        \"name\": \"Viva La Vida or Death and All His Friends\", \"tns\": [], \"pic_str\":
+        \"18569651881855121\", \"id\": 403157, \"pic\": 18569651881855121}, \"l\":
+        {\"br\": 128000, \"fid\": 0, \"size\": 3879123, \"vd\": -43113.0, \"sr\":
+        44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0,
+        \"sr\": 44100}, \"version\": 70, \"cp\": 7002, \"alia\": [], \"djId\": 0,
+        \"single\": 0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 104, \"name\":
+        \"Viva La Vida\", \"tns\": [\"\u751F\u547D\u4E07\u5C81\"], \"mark\": 17180139520},
+        {\"no\": 3, \"rt\": \"600902000007500037\", \"copyright\": 1, \"fee\": 0,
+        \"privilege\": {\"flag\": 256, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 5148819, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 75.0, \"dt\": 241444, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 5148819, \"sq\": {\"br\": 1614750, \"fid\":
+        0, \"size\": 48734125, \"vd\": -36043.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1220716800007, \"cf\": \"\", \"originCoverType\":
+        0, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 9660125, \"vd\": -36047.0,
+        \"sr\": 44100}, \"mv\": 376215, \"al\": {\"picUrl\": \"http://p1.music.126.net/s7j7_0k06UBy6584_d1fBA==/109951168069982568.jpg\",
+        \"name\": \"Hitzone 47\", \"tns\": [], \"pic_str\": \"109951168069982568\",
+        \"id\": 506175, \"pic\": 109951168069982568}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3864076, \"vd\": -31772.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5796093, \"vd\": -33441.0, \"sr\": 44100}, \"version\":
+        148, \"cp\": -13013, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 182, \"name\": \"Viva La Vida (Repack)\",
+        \"mark\": 262144}, {\"no\": 6, \"rt\": \"600902000003619068\", \"copyright\":
+        1, \"fee\": 1, \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 3985869, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\":
+        320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": true, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 75.0, \"dt\": 324133, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 3985869, \"sq\": {\"br\": 995894, \"fid\":
+        0, \"size\": 40350334, \"vd\": -65128.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1242144000007, \"cf\": \"\", \"originCoverType\":
+        1, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 12968272, \"vd\": -65135.0,
+        \"sr\": 44100}, \"mv\": 0, \"al\": {\"picUrl\": \"http://p1.music.126.net/oi6hxK6CFMzwcjdYYxsOLA==/109951166267877576.jpg\",
+        \"name\": \"LeftRightLeftRightLeft (Live)\", \"tns\": [], \"pic_str\": \"109951166267877576\",
+        \"id\": 403145, \"pic\": 109951166267877576}, \"l\": {\"br\": 128001, \"fid\":
+        0, \"size\": 5187335, \"vd\": -61022.0, \"sr\": 44100}, \"m\": {\"br\": 192001,
+        \"fid\": 0, \"size\": 7780981, \"vd\": -62550.0, \"sr\": 44100}, \"version\":
+        42, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 76, \"name\": \"Viva La Vida (Live
+        in Paris, 2008)\", \"mark\": 17180139520}, {\"no\": 1, \"copyright\": 2, \"fee\":
+        0, \"privilege\": {\"flag\": 257, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 34200632, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 25.0, \"dt\": 254600, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 34200632, \"sq\": {\"br\": 759951, \"fid\":
+        0, \"size\": 24190119, \"vd\": -19804.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"01\", \"publishTime\": 1388505600004, \"cf\": \"\", \"originCoverType\":
+        0, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 10186754, \"vd\": -19810.0,
+        \"sr\": 44100}, \"mv\": 0, \"al\": {\"picUrl\": \"http://p1.music.126.net/FZX7XAjsmEPGyVOqm4H7aQ==/109951166361039007.jpg\",
+        \"name\": \"\u6700\u65B0\u70ED\u6B4C\u6162\u6447109\", \"tns\": [], \"pic_str\":
+        \"109951166361039007\", \"id\": 3263927, \"pic\": 109951166361039007}, \"l\":
+        {\"br\": 128000, \"fid\": 0, \"size\": 4074728, \"vd\": -15501.0, \"sr\":
+        44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 6112070, \"vd\": -17199.0,
+        \"sr\": 44100}, \"version\": 264, \"cp\": 0, \"alia\": [], \"djId\": 0, \"single\":
+        0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 298, \"name\":
+        \"Viva La Vida  (\u4F34\u594F\u7248)\", \"mark\": 655488}, {\"no\": 1, \"rt\":
+        \"\", \"copyright\": 1, \"fee\": 8, \"privilege\": {\"flag\": 4, \"code\":
+        0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\":
+        \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\": 0, \"maxbr\": 999000,
+        \"id\": 1318772804, \"sp\": 7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\":
+        [{\"rate\": 128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\":
+        0}, {\"rate\": 320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\":
+        1}], \"freeTrialPrivilege\": {\"userConsumable\": false, \"resConsumable\":
+        false, \"cannotListenReason\": 1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\":
+        \"lossless\", \"cp\": 1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\",
+        \"cs\": false, \"toast\": false, \"playMaxbr\": 999000, \"flLevel\": \"none\",
+        \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\": 25.0, \"dt\": 251066, \"rtype\":
+        0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\": true, \"id\": 1318772804,
+        \"sq\": {\"br\": 1074445, \"fid\": 0, \"size\": 33719667, \"vd\": -80153.0,
+        \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\": 1539792000000,
+        \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320001, \"fid\": 0,
+        \"size\": 10045693, \"vd\": -80166.0, \"sr\": 44100}, \"mv\": 290027, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/QEDus3KT3JKSGcunDDekaA==/109951163690467249.jpg\",
+        \"name\": \"Viva La Vida (Live in Buenos Aires)\", \"tns\": [], \"pic_str\":
+        \"109951163690467249\", \"id\": 73972590, \"pic\": 109951163690467249}, \"l\":
+        {\"br\": 128001, \"fid\": 0, \"size\": 4018303, \"vd\": -76094.0, \"sr\":
+        44100}, \"m\": {\"br\": 192001, \"fid\": 0, \"size\": 6027433, \"vd\": -77599.0,
+        \"sr\": 44100}, \"version\": 8, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\":
+        0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 42, \"name\":
+        \"Viva La Vida (Live in Buenos Aires)\", \"mark\": 17180139520}, {\"no\":
+        22, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\": {\"flag\":
+        4, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0,
+        \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\":
+        0, \"maxbr\": 999000, \"id\": 1356428164, \"sp\": 7, \"payed\": 0, \"rscl\":
+        0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\": 1},
+        {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        10.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1356428164, \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346,
+        \"vd\": -46904.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1554393600000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/_it5hGhZ-PjPisX45-1bzw==/109951163973209973.jpg\",
+        \"name\": \"100 Greatest Summer Songs\", \"tns\": [], \"pic_str\": \"109951163973209973\",
+        \"id\": 78317878, \"pic\": 109951163973209973}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        20, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 54, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}, {\"no\": 9, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\":
+        {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 26830946, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        90.0, \"dt\": 298333, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 26830946, \"sq\": {\"br\": 945855, \"fid\": 0, \"size\": 35272510,
+        \"vd\": -53124.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\":
+        1353254400000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 11935913, \"vd\": -53130.0, \"sr\": 44100}, \"mv\":
+        0, \"al\": {\"picUrl\": \"http://p1.music.126.net/aIj1ActF8QmSH5Tq874SsQ==/109951166140738233.jpg\",
+        \"name\": \"Live 2012\", \"tns\": [], \"pic_str\": \"109951166140738233\",
+        \"id\": 2565143, \"pic\": 109951166140738233}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 4774391, \"vd\": -49006.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 7161565, \"vd\": -50554.0, \"sr\": 44100}, \"version\":
+        39, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 73, \"name\": \"Viva La Vida (Live)\",
+        \"mark\": 17180139520}, {\"no\": 2, \"copyright\": 0, \"fee\": 0, \"privilege\":
+        {\"flag\": 256, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"exhigh\",
+        \"rightSource\": 0, \"maxbr\": 320000, \"id\": 448316172, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        320000, \"downloadMaxBrLevel\": \"exhigh\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"exhigh\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        320000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        10.0, \"dt\": 234556, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 448316172, \"st\": 0, \"cd\": \"1\", \"publishTime\": 1481817600007,
+        \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000, \"fid\": 0,
+        \"size\": 9384272, \"vd\": -36424.0, \"sr\": 44100}, \"mv\": 0, \"al\": {\"picUrl\":
+        \"http://p1.music.126.net/ViFavZIwe9i2g0Y5h_YCjA==/3413983646806045.jpg\",
+        \"name\": \"Adventure Of A Lifetime (Live from Spotify London)\", \"tns\":
+        [], \"id\": 35075051, \"pic\": 3413983646806045}, \"l\": {\"br\": 128000,
+        \"fid\": 0, \"size\": 3753735, \"vd\": -32091.0, \"sr\": 44100}, \"m\": {\"br\":
+        192000, \"fid\": 0, \"size\": 5630581, \"vd\": -33799.0, \"sr\": 44100}, \"version\":
+        11, \"cp\": 0, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 45, \"name\": \"Viva La Vida (Live
+        from Spotify London)\", \"mark\": 262144}, {\"no\": 7, \"copyright\": 0, \"fee\":
+        8, \"privilege\": {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"exhigh\", \"rightSource\": 0, \"maxbr\": 320000, \"id\": 33187386, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 320000, \"downloadMaxBrLevel\": \"exhigh\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"exhigh\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 320000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 15.0, \"dt\": 237000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 33187386, \"st\": 0, \"cd\": \"1\", \"publishTime\":
+        1394553600007, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9506524, \"vd\": -29153.0, \"sr\": 44100}, \"mv\": 236051,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/MXXcK4zkpA082hnESNMVWQ==/7746059418716335.jpg\",
+        \"name\": \"Live At The iTunes Festival At SXSW 2014\", \"tns\": [], \"id\":
+        3188054, \"pic\": 7746059418716335}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\":
+        3802635, \"vd\": -24976.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\":
+        0, \"size\": 5703932, \"vd\": -26569.0, \"sr\": 44100}, \"version\": 32, \"cp\":
+        14002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\",
+        \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 66, \"name\": \"Viva La Vida (Live)\", \"mark\": 17180139520},
+        {\"no\": 1, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\": {\"flag\":
+        4, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0,
+        \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\":
+        0, \"maxbr\": 999000, \"id\": 1357545417, \"sp\": 7, \"payed\": 0, \"rscl\":
+        0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\": 1},
+        {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        20.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1357545417, \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346,
+        \"vd\": -47436.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1553788800000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/DZkcKJFy6wLQv2UgnhahgA==/109951163985858492.jpg\",
+        \"name\": \"Happy\", \"tns\": [], \"pic_str\": \"109951163985858492\", \"id\":
+        78392508, \"pic\": 109951163985858492}, \"l\": {\"br\": 128000, \"fid\": 0,
+        \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        16, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 50, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}, {\"no\": 4, \"rt\": \"600902000003619068\", \"copyright\": 1,
+        \"fee\": 0, \"privilege\": {\"flag\": 256, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"exhigh\", \"rightSource\": 0, \"maxbr\": 320000, \"id\": 3985758, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 320000, \"downloadMaxBrLevel\": \"exhigh\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"exhigh\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 320000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 65.0, \"dt\": 283000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 3985758, \"st\": 0, \"cd\": \"1\", \"publishTime\":
+        1311264000007, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 11354050, \"vd\": -16100.0, \"sr\": 44100}, \"mv\":
+        0, \"al\": {\"picUrl\": \"http://p1.music.126.net/wl07btwOw7vDda1GFMb3jw==/1764716162587644.jpg\",
+        \"name\": \"iTunes Festival: London\", \"tns\": [], \"id\": 403130, \"pic\":
+        1764716162587644}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\": 4541733,
+        \"vd\": -11799.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\":
+        6812505, \"vd\": -13500.0, \"sr\": 44100}, \"version\": 21, \"cp\": 5003,
+        \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\",
+        \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 55, \"name\": \"Viva La Vida (Live)\", \"mark\": 262144},
+        {\"no\": 12, \"copyright\": 0, \"fee\": 0, \"privilege\": {\"flag\": 256,
+        \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\":
+        0, \"plLevel\": \"none\", \"maxBrLevel\": \"higher\", \"rightSource\": 0,
+        \"maxbr\": 192000, \"id\": 32803505, \"sp\": 7, \"payed\": 0, \"rscl\": 0,
+        \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\": 0},
+        {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        192000, \"downloadMaxBrLevel\": \"higher\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"higher\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        192000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        5.0, \"dt\": 236000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 32803505, \"st\": 0, \"cd\": \"1\", \"publishTime\": 1199116800000,
+        \"cf\": \"\", \"originCoverType\": 0, \"mv\": 321365, \"al\": {\"picUrl\":
+        \"http://p1.music.126.net/vMSsmBsyPfmiqiVh6h2PlA==/7968160767146135.jpg\",
+        \"name\": \"Coldplay: Then and Now (Live)\", \"tns\": [], \"id\": 3171239,
+        \"pic\": 7968160767146135}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\":
+        3786042, \"vd\": -46925.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\":
+        0, \"size\": 5678979, \"vd\": -48604.0, \"sr\": 44100}, \"version\": 20, \"cp\":
+        0, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\",
+        \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 54, \"name\": \"Viva la Vida (Live)\", \"mark\": 262144},
+        {\"no\": 11, \"rt\": \"\", \"copyright\": 1, \"fee\": 8, \"privilege\": {\"flag\":
+        261, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\":
+        0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\":
+        0, \"maxbr\": 999000, \"id\": 2729050730, \"sp\": 7, \"payed\": 0, \"rscl\":
+        0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\": 0},
+        {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        10.0, \"dt\": 247626, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 2729050730, \"sq\": {\"br\": 999258, \"fid\": 0, \"size\": 30934931,
+        \"vd\": -3756.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1405612800000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9907766, \"vd\": -3736.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/S-9Pvx0NZWg4aIdnEq3BNA==/109951171507149654.jpg\",
+        \"name\": \"Live in Los Angeles 2014\", \"tns\": [], \"pic_str\": \"109951171507149654\",
+        \"id\": 279327025, \"pic\": 109951171507149654}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3963133, \"vd\": 461.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5944677, \"vd\": -1136.0, \"sr\": 44100}, \"version\":
+        3, \"cp\": 743010, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 37, \"name\": \"Viva La Vida (live)\",
+        \"mark\": 270464}, {\"no\": 43, \"rt\": \"\", \"copyright\": 1, \"fee\": 1,
+        \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1806490180, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\":
+        320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": true, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 25.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 1806490180, \"sq\": {\"br\": 916481,
+        \"fid\": 0, \"size\": 27766346, \"vd\": -47202.0, \"sr\": 44100}, \"st\":
+        0, \"cd\": \"01\", \"publishTime\": 1608825600000, \"cf\": \"\", \"originCoverType\":
+        0, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0,
+        \"sr\": 44100}, \"mv\": 0, \"al\": {\"picUrl\": \"http://p1.music.126.net/vhk7dIVt2RIACw6Xtd9duA==/109951165560753099.jpg\",
+        \"name\": \"New Years Eve Party At Home\", \"tns\": [], \"pic_str\": \"109951165560753099\",
+        \"id\": 120791030, \"pic\": 109951165560753099}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        11, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 45, \"name\": \"Viva La Vida\", \"mark\":
+        270336}, {\"no\": 15, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\":
+        {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1318772624, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        55.0, \"dt\": 251066, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1318772624, \"sq\": {\"br\": 1074445, \"fid\": 0, \"size\":
+        33719667, \"vd\": -80153.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1544112000000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320001,
+        \"fid\": 0, \"size\": 10045693, \"vd\": -80166.0, \"sr\": 44100}, \"mv\":
+        290027, \"al\": {\"picUrl\": \"http://p1.music.126.net/FzDhG5F9f9m1SxkDIVv7ng==/109951163720712020.jpg\",
+        \"name\": \"Live in Buenos Aires\", \"tns\": [], \"pic_str\": \"109951163720712020\",
+        \"id\": 74796850, \"pic\": 109951163720712020}, \"l\": {\"br\": 128001, \"fid\":
+        0, \"size\": 4018303, \"vd\": -76094.0, \"sr\": 44100}, \"m\": {\"br\": 192001,
+        \"fid\": 0, \"size\": 6027433, \"vd\": -77599.0, \"sr\": 44100}, \"version\":
+        352, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 386, \"name\": \"Viva La Vida (Live
+        in Buenos Aires)\", \"mark\": 17180139520}, {\"no\": 1, \"rt\": \"\", \"copyright\":
+        0, \"fee\": 0, \"privilege\": {\"flag\": 129, \"code\": 0, \"dlLevel\": \"exhigh\",
+        \"subp\": 1, \"fl\": 320000, \"fee\": 0, \"dl\": 320000, \"plLevel\": \"exhigh\",
+        \"maxBrLevel\": \"exhigh\", \"rightSource\": 0, \"maxbr\": 320000, \"id\":
+        2154263581, \"sp\": 7, \"payed\": 0, \"st\": 0, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false}, \"downloadMaxbr\":
+        320000, \"downloadMaxBrLevel\": \"exhigh\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"exhigh\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        320000, \"flLevel\": \"exhigh\", \"pl\": 320000}, \"mst\": 9, \"pst\": 0,
+        \"pop\": 10.0, \"dt\": 245551, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [],
+        \"resourceState\": true, \"id\": 2154263581, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        0, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000, \"fid\":
+        0, \"size\": 9824174, \"vd\": 32951.0, \"sr\": 44100}, \"mv\": 0, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/nXkiXzdl9pT0Qm9c1phNVw==/109951169575005011.jpg\",
+        \"name\": \"\u94A2\u7434\xB7\u7EAF\u97F3\u4E50\", \"tns\": [], \"pic_str\":
+        \"109951169575005011\", \"id\": 195248133, \"pic\": 109951169575005011}, \"l\":
+        {\"br\": 128000, \"fid\": 0, \"size\": 3929696, \"vd\": 37374.0, \"sr\": 44100},
+        \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5894522, \"vd\": 35593.0, \"sr\":
+        44100}, \"version\": 5, \"cp\": 0, \"alia\": [], \"djId\": 0, \"single\":
+        0, \"ar\": [{\"name\": \"\u94A2\u7434Cover\", \"tns\": [], \"alias\": [],
+        \"id\": 61731421}], \"ftype\": 0, \"t\": 0, \"v\": 39, \"name\": \"Viva La
+        Vida - Coldplay\", \"mark\": 131200}, {\"no\": 1, \"rt\": \"\", \"copyright\":
+        1, \"fee\": 8, \"privilege\": {\"flag\": 261, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 2607193067, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 10.0, \"dt\": 192628, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 2607193067, \"sq\": {\"br\": 831634,
+        \"fid\": 0, \"size\": 20024590, \"vd\": -9123.0, \"sr\": 44100}, \"st\": 0,
+        \"cd\": \"01\", \"publishTime\": 1722528000000, \"cf\": \"\", \"originCoverType\":
+        2, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 7708256, \"vd\": -9049.0,
+        \"sr\": 44100}, \"mv\": 0, \"al\": {\"picUrl\": \"http://p1.music.126.net/xm146AC6nPs9aKGSDBBMqw==/109951169773567757.jpg\",
+        \"name\": \"Viva La Vida - Coldplay (Violin Cover)\", \"tns\": [], \"pic_str\":
+        \"109951169773567757\", \"id\": 241921063, \"pic\": 109951169773567757}, \"l\":
+        {\"br\": 128000, \"fid\": 0, \"size\": 3083328, \"vd\": -4747.0, \"sr\": 44100},
+        \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 4624971, \"vd\": -6448.0, \"sr\":
+        44100}, \"version\": 3, \"cp\": 743010, \"alia\": [], \"djId\": 0, \"single\":
+        0, \"ar\": [{\"name\": \"Filip Janc\xEDk\", \"tns\": [], \"alias\": [], \"id\":
+        456754}], \"ftype\": 0, \"t\": 0, \"v\": 37, \"name\": \"Viva La Vida - Coldplay
+        (Violin Cover)\", \"mark\": 270464}, {\"no\": 7, \"rt\": \"600902000003619068\",
+        \"copyright\": 1, \"fee\": 1, \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\":
+        \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\",
+        \"maxBrLevel\": \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\":
+        17177209, \"sp\": 7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\":
+        [{\"rate\": 128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\":
+        1}, {\"rate\": 320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\":
+        1}], \"freeTrialPrivilege\": {\"userConsumable\": false, \"resConsumable\":
+        true, \"cannotListenReason\": 1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\":
+        \"lossless\", \"cp\": 0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\",
+        \"cs\": false, \"toast\": false, \"playMaxbr\": 999000, \"flLevel\": \"none\",
+        \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\": 80.0, \"dt\": 242373, \"rtype\":
+        0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\": true, \"id\": 17177209,
+        \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346, \"vd\": -47393.0,
+        \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\": 1211731200000,
+        \"cf\": \"\", \"originCoverType\": 1, \"h\": {\"br\": 320000, \"fid\": 0,
+        \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 376215, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/WubRU-aUF4ZBpqTpPHDnpQ==/109951166155132658.jpg\",
+        \"name\": \"Viva La Vida or Death and All His Friends\", \"tns\": [], \"pic_str\":
+        \"109951166155132658\", \"id\": 1582599, \"pic\": 109951166155132658}, \"l\":
+        {\"br\": 128000, \"fid\": 0, \"size\": 3879123, \"vd\": -43113.0, \"sr\":
+        44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0,
+        \"sr\": 44100}, \"version\": 58, \"cp\": 7002, \"alia\": [], \"djId\": 0,
+        \"single\": 0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 92, \"name\":
+        \"Viva La Vida\", \"mark\": 17180139520}, {\"no\": 7, \"rt\": \"600902000003619068\",
+        \"copyright\": 1, \"fee\": 1, \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\":
+        \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\",
+        \"maxBrLevel\": \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\":
+        22459466, \"sp\": 7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\":
+        [{\"rate\": 128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\":
+        1}, {\"rate\": 320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\":
+        1}], \"freeTrialPrivilege\": {\"userConsumable\": false, \"resConsumable\":
+        true, \"cannotListenReason\": 1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\":
+        \"lossless\", \"cp\": 0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\",
+        \"cs\": false, \"toast\": false, \"playMaxbr\": 999000, \"flLevel\": \"none\",
+        \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\": 70.0, \"dt\": 241426, \"rtype\":
+        0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\": true, \"id\": 22459466,
+        \"sq\": {\"br\": 914615, \"fid\": 0, \"size\": 27601577, \"vd\": -47388.0,
+        \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\": 1227196800007,
+        \"cf\": \"\", \"originCoverType\": 1, \"h\": {\"br\": 320000, \"fid\": 0,
+        \"size\": 9660125, \"vd\": -47393.0, \"sr\": 44100}, \"mv\": 376215, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/RzjfFwliLaom7SBAsiam_Q==/6642149743977181.jpg\",
+        \"name\": \"Viva la Vida / Prospekt's March (Prospekt's March Edition)\",
+        \"tns\": [], \"id\": 2055142, \"pic\": 6642149743977181}, \"l\": {\"br\":
+        128000, \"fid\": 0, \"size\": 3864076, \"vd\": -43109.0, \"sr\": 44100}, \"m\":
+        {\"br\": 192000, \"fid\": 0, \"size\": 5796093, \"vd\": -44787.0, \"sr\":
+        44100}, \"version\": 59, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\":
+        0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 93, \"name\":
+        \"Viva La Vida\", \"mark\": 17180139520}, {\"no\": 45, \"rt\": \"\", \"copyright\":
+        1, \"fee\": 1, \"privilege\": {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1806489382, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\":
+        320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": true, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 15.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 1806489382, \"sq\": {\"br\": 916481,
+        \"fid\": 0, \"size\": 27766346, \"vd\": -48202.0, \"sr\": 44100}, \"st\":
+        0, \"cd\": \"01\", \"publishTime\": 1608825600000, \"cf\": \"\", \"originCoverType\":
+        1, \"mv\": 0, \"al\": {\"picUrl\": \"http://p1.music.126.net/lFEDNGPjYA1Gud7RRQrxpA==/109951165560745457.jpg\",
+        \"name\": \"Happy New Year\", \"tns\": [], \"pic_str\": \"109951165560745457\",
+        \"id\": 120790463, \"pic\": 109951165560745457}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        11, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 45, \"name\": \"Viva La Vida\", \"mark\":
+        270336}, {\"no\": 53, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\":
+        {\"flag\": 4, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1806488770, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        25.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1806488770, \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346,
+        \"vd\": -47115.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1608825600000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/mAQYy-OoM_j_akcwsuw4qw==/109951165560747266.jpg\",
+        \"name\": \"New Years Eve\", \"tns\": [], \"pic_str\": \"109951165560747266\",
+        \"id\": 120790229, \"pic\": 109951165560747266}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        12, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 46, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}, {\"no\": 17, \"rt\": \"600902000007500037\", \"copyright\":
+        1, \"fee\": 0, \"privilege\": {\"flag\": 256, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 5139948, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 85.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 5139948, \"sq\": {\"br\": 916481, \"fid\":
+        0, \"size\": 27766346, \"vd\": -47670.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1228060800007, \"cf\": \"\", \"originCoverType\":
+        1, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0,
+        \"sr\": 44100}, \"mv\": 376215, \"al\": {\"picUrl\": \"http://p1.music.126.net/AkrMmKHXQaeh6V27A1j3bg==/1671257674232418.jpg\",
+        \"name\": \"NRJ Hits 2009\", \"tns\": [], \"id\": 505790, \"pic\": 1671257674232418},
+        \"l\": {\"br\": 128000, \"fid\": 0, \"size\": 3879123, \"vd\": -43113.0, \"sr\":
+        44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0,
+        \"sr\": 44100}, \"version\": 147, \"cp\": 5003, \"alia\": [], \"djId\": 0,
+        \"single\": 0, \"ar\": [{\"name\": \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"],
+        \"alias\": [], \"id\": 89365}], \"ftype\": 0, \"t\": 0, \"v\": 181, \"name\":
+        \"Viva La Vida\", \"mark\": 262144}, {\"no\": 3, \"rt\": \"600902000007500037\",
+        \"copyright\": 1, \"fee\": 0, \"privilege\": {\"flag\": 256, \"code\": 0,
+        \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\":
+        \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\": 0, \"maxbr\": 999000,
+        \"id\": 5141647, \"sp\": 7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\":
+        [{\"rate\": 128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\":
+        0}, {\"rate\": 320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\":
+        1}], \"freeTrialPrivilege\": {\"userConsumable\": false, \"resConsumable\":
+        false, \"cannotListenReason\": 1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\":
+        \"lossless\", \"cp\": 1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\",
+        \"cs\": false, \"toast\": false, \"playMaxbr\": 999000, \"flLevel\": \"none\",
+        \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\": 85.0, \"dt\": 242373, \"rtype\":
+        0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\": true, \"id\": 5141647,
+        \"sq\": {\"br\": 919205, \"fid\": 0, \"size\": 27848877, \"vd\": -47152.0,
+        \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\": 1226851200007,
+        \"cf\": \"\", \"originCoverType\": 1, \"h\": {\"br\": 320000, \"fid\": 0,
+        \"size\": 9697742, \"vd\": -47149.0, \"sr\": 44100}, \"mv\": 376215, \"al\":
+        {\"picUrl\": \"http://p1.music.126.net/vBbggIooMjXPqoH0mACfKg==/1661362069582196.jpg\",
+        \"name\": \"Hitzone Best Of 2008\", \"tns\": [], \"id\": 505865, \"pic\":
+        1661362069582196}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5818662,
+        \"vd\": -44539.0, \"sr\": 44100}, \"version\": 150, \"cp\": -13013, \"alia\":
+        [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\", \"tns\":
+        [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 184, \"name\": \"Viva La Vida\", \"mark\": 262144}, {\"no\":
+        33, \"rt\": \"\", \"copyright\": 2, \"fee\": 8, \"privilege\": {\"flag\":
+        260, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0, \"fee\":
+        0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\", \"rightSource\":
+        0, \"maxbr\": 999000, \"id\": 27445288, \"sp\": 7, \"payed\": 0, \"rscl\":
+        0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\": 0},
+        {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        35.0, \"dt\": 241000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 27445288, \"sq\": {\"br\": 917308, \"fid\": 0, \"size\": 27716481,
+        \"vd\": -51033.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\":
+        1316707200007, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9671779, \"vd\": -51037.0, \"sr\": 44100}, \"mv\": 376215,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/St0QgPvRIp_A0ssjXW6-Gg==/2538772350092637.jpg\",
+        \"name\": \"The Rock Album (Triple M Radio, Australia)\", \"tns\": [], \"id\":
+        2607848, \"pic\": 2538772350092637}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\":
+        3868834, \"vd\": -46791.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\":
+        0, \"size\": 5803149, \"vd\": -48441.0, \"sr\": 44100}, \"version\": 145,
+        \"cp\": 14002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 179, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}, {\"no\": 5, \"rt\": \"\", \"copyright\": 1, \"fee\": 8, \"privilege\":
+        {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1476079714, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        45.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1476079714, \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346,
+        \"vd\": -47393.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1599148800000, \"cf\": \"\", \"originCoverType\": 1, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/Xd9wttXW8CwvxXyyYzvkaQ==/109951165290908465.jpg\",
+        \"name\": \"Pick Me Up\", \"tns\": [], \"pic_str\": \"109951165290908465\",
+        \"id\": 94876024, \"pic\": 109951165290908465}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        9, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 43, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}, {\"no\": 4, \"rt\": \"\", \"copyright\": 1, \"fee\": 8, \"privilege\":
+        {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 27645014, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\": 320000, \"chargeType\":
+        0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": false, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 1, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        15.0, \"dt\": 235000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 27645014, \"sq\": {\"br\": 926829, \"fid\": 0, \"size\": 27259604,
+        \"vd\": -21561.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"1\", \"publishTime\":
+        1374076800007, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9414728, \"vd\": -21569.0, \"sr\": 44100}, \"mv\": 376215,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/6193SjumLMojDJ0PF63knw==/5506354231994619.jpg\",
+        \"name\": \"MNM Sing Your Song (The Summerclub Edition) (2013)\", \"tns\":
+        [], \"id\": 2651247, \"pic\": 5506354231994619}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3766010, \"vd\": -17468.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5648916, \"vd\": -19004.0, \"sr\": 44100}, \"version\":
+        146, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 180, \"name\": \"Viva La Vida\", \"mark\":
+        270336}, {\"no\": 1, \"rt\": \"600902000003619068\", \"copyright\": 1, \"fee\":
+        1, \"privilege\": {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 3986040, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\":
+        320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": true, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 95.0, \"dt\": 241426, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 3986040, \"sq\": {\"br\": 914615, \"fid\":
+        0, \"size\": 27601563, \"vd\": -47388.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1211644800007, \"cf\": \"\", \"originCoverType\":
+        1, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 9660125, \"vd\": -47393.0,
+        \"sr\": 44100}, \"mv\": 376215, \"al\": {\"picUrl\": \"http://p1.music.126.net/HcEooaAq_6K_EIrgm5YP5A==/109951163077709503.jpg\",
+        \"name\": \"Viva la Vida\", \"tns\": [], \"pic_str\": \"109951163077709503\",
+        \"id\": 403163, \"pic\": 109951163077709503}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3864076, \"vd\": -43104.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5796093, \"vd\": -44784.0, \"sr\": 44100}, \"version\":
+        38, \"cp\": 14002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 72, \"name\": \"Viva la Vida\", \"mark\":
+        17180139520}, {\"no\": 1, \"rt\": \"600902000007500037\", \"copyright\": 1,
+        \"fee\": 1, \"privilege\": {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\",
+        \"subp\": 1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 24953422, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\":
+        320000, \"chargeType\": 1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": true, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        0, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 25.0, \"dt\": 224000, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 24953422, \"sq\": {\"br\": 954099, \"fid\":
+        0, \"size\": 26803849, \"vd\": -57824.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1232899200007, \"cf\": \"\", \"originCoverType\":
+        0, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 8992556, \"vd\": -57830.0,
+        \"sr\": 44100}, \"mv\": 376215, \"al\": {\"picUrl\": \"http://p1.music.126.net/MzxX8rQNnCxKfVO_yS8_Kg==/909296116199925.jpg\",
+        \"name\": \"2009 GRAMMY Nominees\", \"tns\": [], \"id\": 2206679, \"pic\":
+        909296116199925}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\": 3597120, \"vd\":
+        -53590.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\": 5395599,
+        \"vd\": -55232.0, \"sr\": 44100}, \"version\": 155, \"cp\": 14002, \"alia\":
+        [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\", \"tns\":
+        [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 189, \"name\": \"Viva La Vida\", \"mark\": 17180139520},
+        {\"no\": 13, \"rt\": \"600902000003619068\", \"copyright\": 1, \"fee\": 8,
+        \"privilege\": {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\":
+        1, \"fl\": 0, \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\":
+        \"lossless\", \"rightSource\": 0, \"maxbr\": 999000, \"id\": 24603558, \"sp\":
+        7, \"payed\": 0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\":
+        128000, \"chargeType\": 0}, {\"rate\": 192000, \"chargeType\": 0}, {\"rate\":
+        320000, \"chargeType\": 0}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\":
+        {\"userConsumable\": false, \"resConsumable\": false, \"cannotListenReason\":
+        1}, \"downloadMaxbr\": 999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\":
+        1, \"preSell\": false, \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\":
+        false, \"playMaxbr\": 999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\":
+        9, \"pst\": 0, \"pop\": 25.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\":
+        [], \"resourceState\": true, \"id\": 24603558, \"sq\": {\"br\": 916481, \"fid\":
+        0, \"size\": 27766346, \"vd\": -47393.0, \"sr\": 44100}, \"st\": 0, \"cd\":
+        \"1\", \"publishTime\": 1266163200007, \"cf\": \"\", \"originCoverType\":
+        0, \"h\": {\"br\": 320000, \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0,
+        \"sr\": 44100}, \"mv\": 376215, \"al\": {\"picUrl\": \"http://p1.music.126.net/MjJAodYRxXQM1a-Yn7bktQ==/825733232489109.jpg\",
+        \"name\": \"Now That's What I Call The 00's\", \"tns\": [], \"id\": 2189684,
+        \"pic\": 825733232489109}, \"l\": {\"br\": 128000, \"fid\": 0, \"size\": 3879123,
+        \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000, \"fid\": 0, \"size\":
+        5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\": 144, \"cp\": 7002,
+        \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\": \"Coldplay\",
+        \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\": 89365}], \"ftype\":
+        0, \"t\": 0, \"v\": 178, \"name\": \"Viva La Vida (Radio Edit)\", \"mark\":
+        17180139520}, {\"no\": 4, \"rt\": \"\", \"copyright\": 1, \"fee\": 1, \"privilege\":
+        {\"flag\": 260, \"code\": 0, \"dlLevel\": \"none\", \"subp\": 1, \"fl\": 0,
+        \"fee\": 0, \"dl\": 0, \"plLevel\": \"none\", \"maxBrLevel\": \"lossless\",
+        \"rightSource\": 0, \"maxbr\": 999000, \"id\": 1804775904, \"sp\": 7, \"payed\":
+        0, \"rscl\": 0, \"st\": -100, \"chargeInfoList\": [{\"rate\": 128000, \"chargeType\":
+        1}, {\"rate\": 192000, \"chargeType\": 1}, {\"rate\": 320000, \"chargeType\":
+        1}, {\"rate\": 999000, \"chargeType\": 1}], \"freeTrialPrivilege\": {\"userConsumable\":
+        false, \"resConsumable\": true, \"cannotListenReason\": 1}, \"downloadMaxbr\":
+        999000, \"downloadMaxBrLevel\": \"lossless\", \"cp\": 0, \"preSell\": false,
+        \"playMaxBrLevel\": \"lossless\", \"cs\": false, \"toast\": false, \"playMaxbr\":
+        999000, \"flLevel\": \"none\", \"pl\": 0}, \"mst\": 9, \"pst\": 0, \"pop\":
+        15.0, \"dt\": 242373, \"rtype\": 0, \"s_id\": 0, \"rtUrls\": [], \"resourceState\":
+        true, \"id\": 1804775904, \"sq\": {\"br\": 916481, \"fid\": 0, \"size\": 27766346,
+        \"vd\": -47594.0, \"sr\": 44100}, \"st\": 0, \"cd\": \"01\", \"publishTime\":
+        1608220800000, \"cf\": \"\", \"originCoverType\": 0, \"h\": {\"br\": 320000,
+        \"fid\": 0, \"size\": 9697742, \"vd\": -47397.0, \"sr\": 44100}, \"mv\": 0,
+        \"al\": {\"picUrl\": \"http://p1.music.126.net/UtC9DuNlkX6PWmKj16fGOg==/109951165544890018.jpg\",
+        \"name\": \"Top Hits (Greatest Songs Ever)\", \"tns\": [], \"pic_str\": \"109951165544890018\",
+        \"id\": 120503012, \"pic\": 109951165544890018}, \"l\": {\"br\": 128000, \"fid\":
+        0, \"size\": 3879123, \"vd\": -43113.0, \"sr\": 44100}, \"m\": {\"br\": 192000,
+        \"fid\": 0, \"size\": 5818662, \"vd\": -44787.0, \"sr\": 44100}, \"version\":
+        11, \"cp\": 7002, \"alia\": [], \"djId\": 0, \"single\": 0, \"ar\": [{\"name\":
+        \"Coldplay\", \"tns\": [\"\u9177\u73A9\u4E50\u961F\"], \"alias\": [], \"id\":
+        89365}], \"ftype\": 0, \"t\": 0, \"v\": 45, \"name\": \"Viva La Vida\", \"mark\":
+        17180139520}], \"songCount\": 343}, \"code\": 200, \"trp\": {\"rules\": [\"search_tab_song::1806488770::searchAlg$isGlobalQuality$1\",
+        \"search_tab_song::3986017::searchAlg$isGlobalQuality$1\", \"search_tab_song::3985758::searchAlg$isGlobalQuality$1\",
+        \"search_tab_song::5139948::searchAlg$isGlobalQuality$1\", \"search_tab_song::26830946::searchAlg$isGlobalQuality$1\",
+        \"search_tab_song::5148819::searchAlg$isGlobalQuality$1\", \"search_tab_song::1318772624::searchAlg$isGlobalQuality$1\"]}}"
+    headers:
+      cache-control:
+      - no-cache
+      - no-store
+      connection:
+      - keep-alive
+      content-length:
+      - '50671'
+      content-type:
+      - text/plain;charset=UTF-8
+      date:
+      - Wed, 07 Oct 2026 05:51:48 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      gw-thread:
+      - '44185'
+      gw-time:
+      - '1791352308549'
+      mconfig-bucket:
+      - '999999'
+      server:
+      - nginx
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-cv:
+      - '1791352308937'
+      x-from-src:
+      - 213.250.172.17
+      x-httpcache-status:
+      - NML-L3
+      x-traceid:
+      - 000001a114eb03411f3e0a7baed70007
+      x-traceid-v2:
+      - 33f968494fb5093edfea5c3e8194e70b^1789887504227^-7411672837
+      x-via:
+      - MusicServer
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - music.163.com
+      referer:
+      - https://music.163.com/
+    method: GET
+    uri: https://music.163.com/api/song/lyric?id=3986017&lv=1&kv=1&tv=-1
+  response:
+    body:
+      string: '{"sgc": false, "sfy": false, "qfy": false, "transUser": {}, "lyricUser":
+        {}, "lrc": {"version": 125, "lyric": "[00:00.000]line 1\n[00:01.000]line 2\n[00:02.000]line
+        3\n[00:11.340]line 4\n[00:13.340]line 5\n[00:17.080]line 6\n[00:19.720]line
+        7\n[00:23.840]line 8\n[00:28.090]line 9\n[00:41.270]line 10\n[00:44.800]line
+        11\n[00:48.030]line 12\n[00:51.840]line 13\n[00:55.050]line 14\n[00:58.670]line
+        15\n[01:01.758]line 16\n[01:05.659]line 17\n[01:08.688]line 18\n[01:09.537]line
+        19\n[01:13.147]line 20\n[01:16.730]line 21\n[01:20.147]line 22\n[01:23.700]line
+        23\n[01:27.099]line 24\n[01:33.560]line 25\n[01:39.188]line 26\n[01:50.477]line
+        27\n[01:54.665]line 28\n[01:57.075]line 29\n[02:01.025]line 30\n[02:02.924]line
+        31\n[02:07.867]line 32\n[02:11.036]line 33\n[02:15.073]line 34\n[02:17.664]line
+        35\n[02:19.074]line 36\n[02:22.464]line 37\n[02:25.984]line 38\n[02:29.464]line
+        39\n[02:34.096]line 40\n[02:36.715]line 41\n[02:39.616]line 42\n[02:42.465]line
+        43\n[02:47.066]line 44\n[02:59.455]line 45\n[03:15.432]line 46\n[03:18.451]line
+        47\n[03:21.884]line 48\n[03:25.241]line 49\n[03:28.812]line 50\n[03:32.232]line
+        51\n[03:35.733]line 52\n[03:38.673]line 53\n[03:42.863]line 54\n[03:57.373]line
+        55\n[03:57.685]line 56\n[03:57.997]line 57\n[03:58.309]line 58\n[03:58.621]line
+        59\n[03:58.933]line 60\n[03:59.245]line 61\n[03:59.557]line 62\n[03:59.869]line
+        63\n[04:00.181]line 64\n[04:00.493]line 65\n[04:00.805]line 66\n[04:01.117]line
+        67\n[04:01.429]line 68\n[04:01.741]line 69\n[04:02.053]line 70"}, "klyric":
+        {"version": 0, "lyric": ""}, "tlyric": {"version": 125, "lyric": "[00:11.340]line
+        1\n[00:13.340]line 2\n[00:17.080]line 3\n[00:19.720]line 4\n[00:23.840]line
+        5\n[00:28.090]line 6\n[00:41.270]line 7\n[00:44.800]line 8\n[00:48.030]line
+        9\n[00:51.840]line 10\n[00:55.050]line 11\n[00:58.670]line 12\n[01:01.758]line
+        13\n[01:05.659]line 14\n[01:08.688]line 15\n[01:09.537]line 16\n[01:13.147]line
+        17\n[01:16.730]line 18\n[01:20.147]line 19\n[01:23.700]line 20\n[01:27.099]line
+        21\n[01:33.560]line 22\n[01:39.188]line 23\n[01:50.477]line 24\n[01:54.665]line
+        25\n[01:57.075]line 26\n[02:01.025]line 27\n[02:02.924]line 28\n[02:07.867]line
+        29\n[02:11.036]line 30\n[02:15.073]line 31\n[02:17.664]line 32\n[02:19.074]line
+        33\n[02:22.464]line 34\n[02:25.984]line 35\n[02:29.464]line 36\n[02:34.096]line
+        37\n[02:36.715]line 38\n[02:39.616]line 39\n[02:42.465]line 40\n[02:47.066]line
+        41\n[02:59.455]line 42\n[03:15.432]line 43\n[03:18.451]line 44\n[03:21.884]line
+        45\n[03:25.241]line 46\n[03:28.812]line 47\n[03:32.232]line 48\n[03:35.733]line
+        49\n[03:38.673]line 50\n[03:42.863]line 51"}, "code": 200}'
+    headers:
+      cache-control:
+      - no-cache
+      - no-store
+      connection:
+      - keep-alive
+      content-length:
+      - '2605'
+      content-type:
+      - text/plain;charset=UTF-8
+      date:
+      - Wed, 07 Oct 2026 05:51:49 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      gw-thread:
+      - '524058'
+      gw-time:
+      - '1791352309300'
+      mconfig-bucket:
+      - '999999'
+      server:
+      - nginx
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-cv:
+      - '1791352309312'
+      x-from-src:
+      - 213.250.172.17
+      x-httpcache-status:
+      - NML-L3
+      x-traceid:
+      - 000001a114eb063115dd0ab0ea060007
+      x-traceid-v2:
+      - f5f38e9751505db22b5a289a2a119558^1789887340870^-7414051797
+      x-via:
+      - MusicServer
+    status:
+      code: 200
+      message: OK
+version: 1

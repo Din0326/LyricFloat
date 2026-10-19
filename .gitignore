@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.coverage
+
+# Runtime data
+logs/
+*.log
+
+# Measurement raw data stays local; summaries are committed
+reports/raw/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+
+# Problem reports copied out of AppData (contain lyric snapshots)
+reports/diagnostics/
+
+# Hit-rate workbooks: song titles are listening history
+reports/private/

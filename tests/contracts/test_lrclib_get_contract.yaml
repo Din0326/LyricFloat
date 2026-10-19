@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - lrclib.net
+    method: GET
+    uri: https://lrclib.net/api/get?track_name=Viva+La+Vida&artist_name=Coldplay&album_name=Viva+La+Vida+or+Death+and+All+His+Friends&duration=242
+  response:
+    body:
+      string: '{"id": 16164, "name": "Viva La Vida", "trackName": "Viva La Vida",
+        "artistName": "Coldplay", "albumName": "Viva La Vida or Death and All His
+        Friends", "duration": 242.0, "instrumental": false, "hasWordSync": false,
+        "plainLyrics": "line 1\nline 2\nline 3\nline 4\nline 5\nline 6\nline 7\nline
+        8\nline 9\nline 10\nline 11\nline 12\nline 13\nline 14\nline 15\nline 16\nline
+        17\nline 18\nline 19\nline 20\nline 21\nline 22\nline 23\nline 24\nline 25\nline
+        26\nline 27\nline 28\nline 29\nline 30\nline 31\nline 32\nline 33\nline 34\nline
+        35\nline 36\nline 37\nline 38\nline 39\nline 40\nline 41\nline 42\nline 43\nline
+        44", "syncedLyrics": "[00:13.06]line 1\n[00:16.75]line 2\n[00:19.23]line 3\n[00:23.55]line
+        4\n[00:29.02]line 5\n[00:40.54]line 6\n[00:44.60]line 7\n[00:47.86]line 8\n[00:51.67]line
+        9\n[00:54.44]line 10\n[00:54.51]line 11\n[00:58.48]line 12\n[01:01.15]line
+        13\n[01:05.41]line 14\n[01:08.73]line 15\n[01:09.23]line 16\n[01:13.11]line
+        17\n[01:16.57]line 18\n[01:19.69]line 19\n[01:23.14]line 20\n[01:23.49]line
+        21\n[01:26.89]line 22\n[01:29.52]line 23\n[01:33.23]line 24\n[01:38.22]line
+        25\n[01:49.88]line 26\n[01:54.05]line 27\n[01:56.74]line 28\n[02:01.10]line
+        29\n[02:04.22]line 30\n[02:04.29]line 31\n[02:08.13]line 32\n[02:10.58]line
+        33\n[02:15.15]line 34\n[02:18.22]line 35\n[02:18.92]line 36\n[02:22.52]line
+        37\n[02:25.93]line 38\n[02:29.39]line 39\n[02:32.61]line 40\n[02:32.87]line
+        41\n[02:36.45]line 42\n[02:39.64]line 43\n[02:42.71]line 44\n[02:46.28]line
+        45\n[03:15.05]line 46\n[03:18.10]line 47\n[03:21.68]line 48\n[03:24.96]line
+        49\n[03:28.34]line 50\n[03:28.58]line 51\n[03:32.04]line 52\n[03:35.18]line
+        53\n[03:38.42]line 54\n[03:42.47]line 55", "lyricsfile": "scrubbed"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - retry-after
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a46a6a67e86bf44c-SIN
+      connection:
+      - keep-alive
+      content-length:
+      - '1698'
+      content-type:
+      - application/json
+      date:
+      - Wed, 07 Oct 2026 05:13:16 GMT
+      nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      report-to:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=S5qK3Anfebf7tY3UoeOoZcl%2BpkAxvHrkYNV9yVG1yHUFzEjI%2BqVmQX7cFbGXJlDLdJDfR8WliUu9%2Bfcw1WbyJgPzUzoEPa3bvVbuCk%2B%2FcaR44oMkBbqUsbH2E0k%2B"}]}'
+      server:
+      - cloudflare
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - origin, access-control-request-method, access-control-request-headers
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,452 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - lrclib.net
+    method: GET
+    uri: https://lrclib.net/api/search?track_name=%E5%B0%8F%E5%B9%B8%E9%81%8B&artist_name=%E7%94%B0%E9%A6%A5%E7%94%84
+  response:
+    body:
+      string: "[{\"id\": 34816860, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"\u5C0F\u5E78\u904B\", \"duration\": 222.0, \"instrumental\": false, \"hasWordSync\":
+        false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline
+        6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline
+        14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline
+        22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline
+        30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\\nline 37\\nline
+        38\\nline 39\\nline 40\\nline 41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\":
+        \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line 3\\n[00:32.56]line
+        4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line 7\\n[00:56.33]line
+        8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line 11\\n[01:18.42]line
+        12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line 15\\n[01:41.83]line
+        16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line 19\\n[01:55.55]line
+        20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line 23\\n[02:13.92]line
+        24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line 27\\n[02:41.12]line
+        28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line 31\\n[03:03.27]line
+        32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line 35\\n[03:26.78]line
+        36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line 39\\n[03:41.59]line
+        40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line 43\\n[03:58.80]line
+        44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line 47\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 34816515, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"\u5C0F\u5E78\u904B\", \"duration\": 223.0, \"instrumental\": false, \"hasWordSync\":
+        false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline
+        6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline
+        14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline
+        22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline
+        30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\\nline 37\\nline
+        38\\nline 39\\nline 40\\nline 41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\":
+        \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line 3\\n[00:32.56]line
+        4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line 7\\n[00:56.33]line
+        8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line 11\\n[01:18.42]line
+        12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line 15\\n[01:41.83]line
+        16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line 19\\n[01:55.55]line
+        20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line 23\\n[02:13.92]line
+        24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line 27\\n[02:41.12]line
+        28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line 31\\n[03:03.27]line
+        32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line 35\\n[03:26.78]line
+        36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line 39\\n[03:41.59]line
+        40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line 43\\n[03:58.80]line
+        44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line 47\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 35326194, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"\u5C0F\u5E78\u8FD0 (\u7535\u5F71\u300A\u6211\u7684\u5C11\u5973\u65F6\u4EE3\u300B\u4E3B\u9898\u66F2)\",
+        \"duration\": 266.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\":
+        \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline
+        9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline
+        17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline
+        25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline
+        33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline
+        41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\": \"[00:15.48]line 1\\n[00:21.42]line
+        2\\n[00:27.55]line 3\\n[00:32.56]line 4\\n[00:39.61]line 5\\n[00:45.75]line
+        6\\n[00:51.75]line 7\\n[00:56.33]line 8\\n[01:02.18]line 9\\n[01:08.04]line
+        10\\n[01:13.99]line 11\\n[01:18.42]line 12\\n[01:26.14]line 13\\n[01:31.38]line
+        14\\n[01:37.35]line 15\\n[01:41.83]line 16\\n[01:45.13]line 17\\n[01:48.08]line
+        18\\n[01:52.15]line 19\\n[01:55.55]line 20\\n[02:01.67]line 21\\n[02:06.32]line
+        22\\n[02:09.31]line 23\\n[02:13.92]line 24\\n[02:19.68]line 25\\n[02:29.04]line
+        26\\n[02:35.16]line 27\\n[02:41.12]line 28\\n[02:45.82]line 29\\n[02:51.23]line
+        30\\n[02:57.51]line 31\\n[03:03.27]line 32\\n[03:07.82]line 33\\n[03:15.53]line
+        34\\n[03:20.73]line 35\\n[03:26.78]line 36\\n[03:31.35]line 37\\n[03:34.49]line
+        38\\n[03:37.44]line 39\\n[03:41.59]line 40\\n[03:44.77]line 41\\n[03:51.08]line
+        42\\n[03:55.68]line 43\\n[03:58.80]line 44\\n[04:03.25]line 45\\n[04:06.33]line
+        46\\n[04:09.56]line 47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 5708301,
+        \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\":
+        \"\u7530\u99A5\u7504\", \"albumName\": \"\u5C0F\u5E78\u904B\", \"duration\":
+        266.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line
+        1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline
+        10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline
+        18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline
+        26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline
+        34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline
+        42\\nline 43\\nline 44\", \"syncedLyrics\": \"[00:15.48]line 1\\n[00:21.42]line
+        2\\n[00:27.55]line 3\\n[00:32.56]line 4\\n[00:39.61]line 5\\n[00:45.75]line
+        6\\n[00:51.75]line 7\\n[00:56.33]line 8\\n[01:02.18]line 9\\n[01:08.04]line
+        10\\n[01:13.99]line 11\\n[01:18.42]line 12\\n[01:26.14]line 13\\n[01:31.38]line
+        14\\n[01:37.35]line 15\\n[01:41.83]line 16\\n[01:45.13]line 17\\n[01:48.08]line
+        18\\n[01:52.15]line 19\\n[01:55.55]line 20\\n[02:01.67]line 21\\n[02:06.32]line
+        22\\n[02:09.31]line 23\\n[02:13.92]line 24\\n[02:19.68]line 25\\n[02:29.04]line
+        26\\n[02:35.16]line 27\\n[02:41.12]line 28\\n[02:45.82]line 29\\n[02:51.23]line
+        30\\n[02:57.51]line 31\\n[03:03.27]line 32\\n[03:07.82]line 33\\n[03:15.53]line
+        34\\n[03:20.73]line 35\\n[03:26.78]line 36\\n[03:31.35]line 37\\n[03:34.49]line
+        38\\n[03:37.44]line 39\\n[03:41.59]line 40\\n[03:44.77]line 41\\n[03:51.08]line
+        42\\n[03:55.68]line 43\\n[03:58.80]line 44\\n[04:03.25]line 45\\n[04:06.33]line
+        46\\n[04:09.56]line 47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 6126364,
+        \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\":
+        \"\u7530\u99A5\u7504\", \"albumName\": \"\u6211\u7684\u5C11\u5973\u6642\u4EE3
+        \u96FB\u5F71\u6B4C\u66F2\u539F\u8072\u5E36 Our Times Soundtrack\", \"duration\":
+        264.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line
+        1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline
+        10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline
+        18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline
+        26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline
+        34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline
+        42\\nline 43\\nline 44\", \"syncedLyrics\": \"[00:11.52]line 1\\n[00:17.62]line
+        2\\n[00:23.72]line 3\\n[00:28.79]line 4\\n[00:35.57]line 5\\n[00:41.95]line
+        6\\n[00:48.04]line 7\\n[00:53.01]line 8\\n[00:58.25]line 9\\n[01:04.31]line
+        10\\n[01:10.08]line 11\\n[01:14.66]line 12\\n[01:22.48]line 13\\n[01:27.74]line
+        14\\n[01:33.98]line 15\\n[01:38.42]line 16\\n[01:41.65]line 17\\n[01:44.66]line
+        18\\n[01:48.91]line 19\\n[01:52.15]line 20\\n[01:58.35]line 21\\n[02:03.03]line
+        22\\n[02:06.08]line 23\\n[02:10.24]line 24\\n[02:15.10]line 25\\n[02:25.69]line
+        26\\n[02:31.22]line 27\\n[02:37.54]line 28\\n[02:42.48]line 29\\n[02:47.95]line
+        30\\n[02:53.83]line 31\\n[02:59.83]line 32\\n[03:04.38]line 33\\n[03:11.65]line
+        34\\n[03:17.45]line 35\\n[03:23.37]line 36\\n[03:27.92]line 37\\n[03:30.91]line
+        38\\n[03:34.01]line 39\\n[03:38.34]line 40\\n[03:41.46]line 41\\n[03:47.42]line
+        42\\n[03:52.02]line 43\\n[03:55.23]line 44\\n[03:59.68]line 45\\n[04:02.71]line
+        46\\n[04:05.94]line 47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 26287159,
+        \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\":
+        \"\u7530\u99A5\u7504\", \"albumName\": \"\u300A\u6211\u7684\u5C11\u5973\u6642\u4EE3\u300B\u96FB\u5F71\u539F\u8072\u5E36\",
+        \"duration\": 265.560816, \"instrumental\": false, \"hasWordSync\": false,
+        \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline
+        7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline
+        15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline
+        23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline
+        31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline
+        39\\nline 40\\nline 41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\":
+        \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line 3\\n[00:32.56]line
+        4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line 7\\n[00:56.33]line
+        8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line 11\\n[01:18.42]line
+        12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line 15\\n[01:41.83]line
+        16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line 19\\n[01:55.55]line
+        20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line 23\\n[02:13.92]line
+        24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line 27\\n[02:41.12]line
+        28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line 31\\n[03:03.27]line
+        32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line 35\\n[03:26.78]line
+        36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line 39\\n[03:41.59]line
+        40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line 43\\n[03:58.80]line
+        44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line 47\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 27590926, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"\u5C0F\u5E78\u904B\", \"duration\": 264.0, \"instrumental\": false, \"hasWordSync\":
+        false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline
+        6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline
+        14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline
+        22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline
+        30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\\nline 37\\nline
+        38\\nline 39\\nline 40\\nline 41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\":
+        \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line 3\\n[00:32.56]line
+        4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line 7\\n[00:56.33]line
+        8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line 11\\n[01:18.42]line
+        12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line 15\\n[01:41.83]line
+        16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line 19\\n[01:55.55]line
+        20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line 23\\n[02:13.92]line
+        24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line 27\\n[02:41.12]line
+        28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line 31\\n[03:03.27]line
+        32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line 35\\n[03:26.78]line
+        36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line 39\\n[03:41.59]line
+        40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line 43\\n[03:58.80]line
+        44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line 47\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 13042426, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"\u6211\u7684\u5C11\u5973\u6642\u4EE3\", \"duration\": 264.0, \"instrumental\":
+        false, \"hasWordSync\": false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline
+        4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline
+        12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline
+        20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline
+        28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline
+        36\", \"syncedLyrics\": null, \"lyricsfile\": \"scrubbed\"}, {\"id\": 30638648,
+        \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\":
+        \"\u7530\u99A5\u7504\", \"albumName\": \"\u5C0F\u5E78\u904B\", \"duration\":
+        259.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line
+        1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline
+        10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline
+        18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline
+        26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline
+        34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline
+        42\\nline 43\\nline 44\", \"syncedLyrics\": \"[00:15.48]line 1\\n[00:21.42]line
+        2\\n[00:27.55]line 3\\n[00:32.56]line 4\\n[00:39.61]line 5\\n[00:45.75]line
+        6\\n[00:51.75]line 7\\n[00:56.33]line 8\\n[01:02.18]line 9\\n[01:08.04]line
+        10\\n[01:13.99]line 11\\n[01:18.42]line 12\\n[01:26.14]line 13\\n[01:31.38]line
+        14\\n[01:37.35]line 15\\n[01:41.83]line 16\\n[01:45.13]line 17\\n[01:48.08]line
+        18\\n[01:52.15]line 19\\n[01:55.55]line 20\\n[02:01.67]line 21\\n[02:06.32]line
+        22\\n[02:09.31]line 23\\n[02:13.92]line 24\\n[02:19.68]line 25\\n[02:29.04]line
+        26\\n[02:35.16]line 27\\n[02:41.12]line 28\\n[02:45.82]line 29\\n[02:51.23]line
+        30\\n[02:57.51]line 31\\n[03:03.27]line 32\\n[03:07.82]line 33\\n[03:15.53]line
+        34\\n[03:20.73]line 35\\n[03:26.78]line 36\\n[03:31.35]line 37\\n[03:34.49]line
+        38\\n[03:37.44]line 39\\n[03:41.59]line 40\\n[03:44.77]line 41\\n[03:51.08]line
+        42\\n[03:55.68]line 43\\n[03:58.80]line 44\\n[04:03.25]line 45\\n[04:06.33]line
+        46\\n[04:09.56]line 47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 30724762,
+        \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\":
+        \"\u7530\u99A5\u7504\", \"albumName\": \"\u6211\u7684\u5C11\u5973\u6642\u4EE3
+        \u96FB\u5F71\u539F\u8072\u5E36\", \"duration\": 263.0, \"instrumental\": false,
+        \"hasWordSync\": false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline
+        4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline
+        12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline
+        20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline
+        28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline
+        36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline 42\\nline 43\\nline
+        44\", \"syncedLyrics\": \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line
+        3\\n[00:32.56]line 4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line
+        7\\n[00:56.33]line 8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line
+        11\\n[01:18.42]line 12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line
+        15\\n[01:41.83]line 16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line
+        19\\n[01:55.55]line 20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line
+        23\\n[02:13.92]line 24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line
+        27\\n[02:41.12]line 28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line
+        31\\n[03:03.27]line 32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line
+        35\\n[03:26.78]line 36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line
+        39\\n[03:41.59]line 40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line
+        43\\n[03:58.80]line 44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line
+        47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 33099561, \"name\": \"\u5C0F\u5E78\u904B\",
+        \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\",
+        \"albumName\": \"\u6211\u7684\u5C11\u5973\u6642\u4EE3\", \"duration\": 289.0,
+        \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line 1\\nline
+        2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline 10\\nline
+        11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline 18\\nline
+        19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline 26\\nline
+        27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline 34\\nline
+        35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline 42\\nline
+        43\\nline 44\", \"syncedLyrics\": \"[00:15.48]line 1\\n[00:21.42]line 2\\n[00:27.55]line
+        3\\n[00:32.56]line 4\\n[00:39.61]line 5\\n[00:45.75]line 6\\n[00:51.75]line
+        7\\n[00:56.33]line 8\\n[01:02.18]line 9\\n[01:08.04]line 10\\n[01:13.99]line
+        11\\n[01:18.42]line 12\\n[01:26.14]line 13\\n[01:31.38]line 14\\n[01:37.35]line
+        15\\n[01:41.83]line 16\\n[01:45.13]line 17\\n[01:48.08]line 18\\n[01:52.15]line
+        19\\n[01:55.55]line 20\\n[02:01.67]line 21\\n[02:06.32]line 22\\n[02:09.31]line
+        23\\n[02:13.92]line 24\\n[02:19.68]line 25\\n[02:29.04]line 26\\n[02:35.16]line
+        27\\n[02:41.12]line 28\\n[02:45.82]line 29\\n[02:51.23]line 30\\n[02:57.51]line
+        31\\n[03:03.27]line 32\\n[03:07.82]line 33\\n[03:15.53]line 34\\n[03:20.73]line
+        35\\n[03:26.78]line 36\\n[03:31.35]line 37\\n[03:34.49]line 38\\n[03:37.44]line
+        39\\n[03:41.59]line 40\\n[03:44.77]line 41\\n[03:51.08]line 42\\n[03:55.68]line
+        43\\n[03:58.80]line 44\\n[04:03.25]line 45\\n[04:06.33]line 46\\n[04:09.56]line
+        47\", \"lyricsfile\": \"scrubbed\"}, {\"id\": 16581795, \"name\": \"\u5C0F\u5E78\u904B\",
+        \"trackName\": \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\",
+        \"albumName\": \"KKBOX November Chinese Top 100 (2015)\", \"duration\": 266.0,
+        \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line 1\\nline
+        2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline 10\\nline
+        11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline 18\\nline
+        19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline 26\\nline
+        27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline 34\\nline
+        35\\nline 36\", \"syncedLyrics\": \"[00:15.69]line 1\\n[00:21.41]line 2\\n[00:27.62]line
+        3\\n[00:32.60]line 4\\n[00:39.83]line 5\\n[00:45.95]line 6\\n[00:52.00]line
+        7\\n[00:56.52]line 8\\n[01:02.32]line 9\\n[01:08.45]line 10\\n[01:14.02]line
+        11\\n[01:18.66]line 12\\n[01:26.20]line 13\\n[01:31.59]line 14\\n[01:37.65]line
+        15\\n[01:45.28]line 16\\n[01:52.59]line 17\\n[01:55.85]line 18\\n[02:01.94]line
+        19\\n[02:09.54]line 20\\n[02:18.81]line 21\\n[02:29.14]line 22\\n[02:35.34]line
+        23\\n[02:41.38]line 24\\n[02:45.84]line 25\\n[02:51.61]line 26\\n[02:57.77]line
+        27\\n[03:03.42]line 28\\n[03:08.02]line 29\\n[03:15.64]line 30\\n[03:20.96]line
+        31\\n[03:27.07]line 32\\n[03:34.69]line 33\\n[03:41.88]line 34\\n[03:45.22]line
+        35\\n[03:51.22]line 36\\n[03:58.88]line 37\\n[04:09.78]line 38\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 14674301, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\":
+        \"\u5C0F\u5E78\u904B\", \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\":
+        \"Disc 1\", \"duration\": 265.533333, \"instrumental\": false, \"hasWordSync\":
+        false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline
+        6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline
+        14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline
+        22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline
+        30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\", \"syncedLyrics\":
+        \"[00:15.69]line 1\\n[00:21.41]line 2\\n[00:27.62]line 3\\n[00:32.60]line
+        4\\n[00:39.83]line 5\\n[00:45.95]line 6\\n[00:52.00]line 7\\n[00:56.52]line
+        8\\n[01:02.32]line 9\\n[01:08.45]line 10\\n[01:14.02]line 11\\n[01:18.66]line
+        12\\n[01:26.20]line 13\\n[01:31.59]line 14\\n[01:37.65]line 15\\n[01:45.28]line
+        16\\n[01:52.59]line 17\\n[01:55.85]line 18\\n[02:01.94]line 19\\n[02:09.54]line
+        20\\n[02:18.81]line 21\\n[02:29.14]line 22\\n[02:35.34]line 23\\n[02:41.38]line
+        24\\n[02:45.84]line 25\\n[02:51.61]line 26\\n[02:57.77]line 27\\n[03:03.42]line
+        28\\n[03:08.02]line 29\\n[03:15.64]line 30\\n[03:20.96]line 31\\n[03:27.07]line
+        32\\n[03:34.69]line 33\\n[03:41.88]line 34\\n[03:45.22]line 35\\n[03:51.22]line
+        36\\n[03:58.88]line 37\\n[04:09.78]line 38\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 33514141, \"name\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"trackName\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\": \"\u7530\u99A5\u7504\",
+        \"duration\": 266.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\":
+        \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline
+        9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline
+        17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline
+        25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline
+        33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline
+        41\\nline 42\", \"syncedLyrics\": \"[00:15.55]line 1\\n[00:21.70]line 2\\n[00:27.81]line
+        3\\n[00:32.64]line 4\\n[00:39.70]line 5\\n[00:45.84]line 6\\n[00:51.92]line
+        7\\n[00:56.57]line 8\\n[01:02.31]line 9\\n[01:08.44]line 10\\n[01:14.03]line
+        11\\n[01:18.53]line 12\\n[01:26.42]line 13\\n[01:31.44]line 14\\n[01:37.58]line
+        15\\n[01:42.00]line 16\\n[01:45.38]line 17\\n[01:52.38]line 18\\n[01:56.05]line
+        19\\n[02:02.04]line 20\\n[02:06.49]line 21\\n[02:09.44]line 22\\n[02:14.12]line
+        23\\n[02:19.57]line 24\\n[02:29.29]line 25\\n[02:35.45]line 26\\n[02:41.32]line
+        27\\n[02:45.92]line 28\\n[02:51.54]line 29\\n[02:57.78]line 30\\n[03:03.44]line
+        31\\n[03:07.98]line 32\\n[03:15.64]line 33\\n[03:21.04]line 34\\n[03:27.19]line
+        35\\n[03:31.69]line 36\\n[03:34.55]line 37\\n[03:41.74]line 38\\n[03:45.21]line
+        39\\n[03:51.23]line 40\\n[03:55.86]line 41\\n[03:58.85]line 42\\n[04:03.52]line
+        43\\n[04:06.45]line 44\\n[04:10.63]line 45\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 9262762, \"name\": \"\u5C0F\u5E78\u904B (KARAOKE\u7248)\", \"trackName\":
+        \"\u5C0F\u5E78\u904B (KARAOKE\u7248)\", \"artistName\": \"\u7530\u99A5\u7504\",
+        \"albumName\": \"\u6211\u7684\u5C11\u5973\u6642\u4EE3 \u96FB\u5F71\u6B4C\u66F2\u539F\u8072\u5E36
+        Our Times Soundtrack\", \"duration\": 263.0, \"instrumental\": false, \"hasWordSync\":
+        false, \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline
+        6\\nline 7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline
+        14\\nline 15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline
+        22\\nline 23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline
+        30\\nline 31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\\nline 37\\nline
+        38\\nline 39\\nline 40\\nline 41\\nline 42\\nline 43\\nline 44\", \"syncedLyrics\":
+        \"[00:11.68]line 1\\n[00:17.90]line 2\\n[00:24.13]line 3\\n[00:29.07]line
+        4\\n[00:35.76]line 5\\n[00:42.26]line 6\\n[00:48.31]line 7\\n[00:53.34]line
+        8\\n[00:58.52]line 9\\n[01:04.47]line 10\\n[01:10.31]line 11\\n[01:15.06]line
+        12\\n[01:22.88]line 13\\n[01:28.03]line 14\\n[01:34.19]line 15\\n[01:38.55]line
+        16\\n[01:41.86]line 17\\n[01:44.61]line 18\\n[01:49.18]line 19\\n[01:52.37]line
+        20\\n[01:58.49]line 21\\n[02:03.21]line 22\\n[02:06.10]line 23\\n[02:10.62]line
+        24\\n[02:23.23]line 25\\n[02:25.79]line 26\\n[02:31.26]line 27\\n[02:37.52]line
+        28\\n[02:42.53]line 29\\n[02:47.95]line 30\\n[02:53.80]line 31\\n[02:59.91]line
+        32\\n[03:04.54]line 33\\n[03:11.70]line 34\\n[03:17.34]line 35\\n[03:23.52]line
+        36\\n[03:28.17]line 37\\n[03:31.01]line 38\\n[03:34.03]line 39\\n[03:38.62]line
+        40\\n[03:41.63]line 41\\n[03:47.71]line 42\\n[03:52.24]line 43\\n[03:55.38]line
+        44\\n[04:00.41]line 45\\n[04:03.00]line 46\\n[04:07.74]line 47\", \"lyricsfile\":
+        \"scrubbed\"}, {\"id\": 6931911, \"name\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"trackName\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\": \"\u5C0F\u5E78\u904B\",
+        \"duration\": 266.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\":
+        \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline
+        9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline
+        17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline
+        25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline
+        33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline
+        41\\nline 42\", \"syncedLyrics\": \"[00:15.55]line 1\\n[00:21.70]line 2\\n[00:27.81]line
+        3\\n[00:32.64]line 4\\n[00:39.70]line 5\\n[00:45.84]line 6\\n[00:51.92]line
+        7\\n[00:56.57]line 8\\n[01:02.31]line 9\\n[01:08.44]line 10\\n[01:14.03]line
+        11\\n[01:18.53]line 12\\n[01:26.42]line 13\\n[01:31.44]line 14\\n[01:37.58]line
+        15\\n[01:42.00]line 16\\n[01:45.38]line 17\\n[01:52.38]line 18\\n[01:56.05]line
+        19\\n[02:02.04]line 20\\n[02:06.49]line 21\\n[02:09.44]line 22\\n[02:14.12]line
+        23\\n[02:19.57]line 24\\n[02:29.29]line 25\\n[02:35.45]line 26\\n[02:41.32]line
+        27\\n[02:45.92]line 28\\n[02:51.54]line 29\\n[02:57.78]line 30\\n[03:03.44]line
+        31\\n[03:07.98]line 32\\n[03:15.64]line 33\\n[03:21.04]line 34\\n[03:27.19]line
+        35\\n[03:31.69]line 36\\n[03:34.55]line 37\\n[03:41.74]line 38\\n[03:45.21]line
+        39\\n[03:51.23]line 40\\n[03:55.86]line 41\\n[03:58.85]line 42\\n[04:03.52]line
+        43\\n[04:06.45]line 44\\n[04:10.63]line 45\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 30698341, \"name\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"trackName\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\": \"\u5C0F\u5E78\u904B\",
+        \"duration\": 170.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\":
+        \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline
+        9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline
+        17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline
+        25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline
+        33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline
+        41\\nline 42\", \"syncedLyrics\": \"[00:15.55]line 1\\n[00:21.70]line 2\\n[00:27.81]line
+        3\\n[00:32.64]line 4\\n[00:39.70]line 5\\n[00:45.84]line 6\\n[00:51.92]line
+        7\\n[00:56.57]line 8\\n[01:02.31]line 9\\n[01:08.44]line 10\\n[01:14.03]line
+        11\\n[01:18.53]line 12\\n[01:26.42]line 13\\n[01:31.44]line 14\\n[01:37.58]line
+        15\\n[01:42.00]line 16\\n[01:45.38]line 17\\n[01:52.38]line 18\\n[01:56.05]line
+        19\\n[02:02.04]line 20\\n[02:06.49]line 21\\n[02:09.44]line 22\\n[02:14.12]line
+        23\\n[02:19.57]line 24\\n[02:29.29]line 25\\n[02:35.45]line 26\\n[02:41.32]line
+        27\\n[02:45.92]line 28\\n[02:51.54]line 29\\n[02:57.78]line 30\\n[03:03.44]line
+        31\\n[03:07.98]line 32\\n[03:15.64]line 33\\n[03:21.04]line 34\\n[03:27.19]line
+        35\\n[03:31.69]line 36\\n[03:34.55]line 37\\n[03:41.74]line 38\\n[03:45.21]line
+        39\\n[03:51.23]line 40\\n[03:55.86]line 41\\n[03:58.85]line 42\\n[04:03.52]line
+        43\\n[04:06.45]line 44\\n[04:10.63]line 45\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 14768687, \"name\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"trackName\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\": \"unknown\", \"duration\":
+        265.0, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\": \"line
+        1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline 9\\nline
+        10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline 17\\nline
+        18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline 25\\nline
+        26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline 33\\nline
+        34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline 41\\nline
+        42\", \"syncedLyrics\": \"[00:15.55]line 1\\n[00:21.70]line 2\\n[00:27.81]line
+        3\\n[00:32.64]line 4\\n[00:39.70]line 5\\n[00:45.84]line 6\\n[00:51.92]line
+        7\\n[00:56.57]line 8\\n[01:02.31]line 9\\n[01:08.44]line 10\\n[01:14.03]line
+        11\\n[01:18.53]line 12\\n[01:26.42]line 13\\n[01:31.44]line 14\\n[01:37.58]line
+        15\\n[01:42.00]line 16\\n[01:45.38]line 17\\n[01:52.38]line 18\\n[01:56.05]line
+        19\\n[02:02.04]line 20\\n[02:06.49]line 21\\n[02:09.44]line 22\\n[02:14.12]line
+        23\\n[02:19.57]line 24\\n[02:29.29]line 25\\n[02:35.45]line 26\\n[02:41.32]line
+        27\\n[02:45.92]line 28\\n[02:51.54]line 29\\n[02:57.78]line 30\\n[03:03.44]line
+        31\\n[03:07.98]line 32\\n[03:15.64]line 33\\n[03:21.04]line 34\\n[03:27.19]line
+        35\\n[03:31.69]line 36\\n[03:34.55]line 37\\n[03:41.74]line 38\\n[03:45.21]line
+        39\\n[03:51.23]line 40\\n[03:55.86]line 41\\n[03:58.85]line 42\\n[04:03.52]line
+        43\\n[04:06.45]line 44\\n[04:10.63]line 45\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 16203280, \"name\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"trackName\": \"\u5C0F\u5E78\u904B(\u6211\u7684\u5C11\u5973\u6642\u4EE3\u96FB\u5F71\u4E3B\u984C\u66F2)\",
+        \"artistName\": \"\u7530\u99A5\u7504\", \"albumName\": \"4:26\", \"duration\":
+        265.52, \"instrumental\": false, \"hasWordSync\": false, \"plainLyrics\":
+        \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline 7\\nline 8\\nline
+        9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline 15\\nline 16\\nline
+        17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline 23\\nline 24\\nline
+        25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline 31\\nline 32\\nline
+        33\\nline 34\\nline 35\\nline 36\\nline 37\\nline 38\\nline 39\\nline 40\\nline
+        41\\nline 42\", \"syncedLyrics\": \"[00:15.55]line 1\\n[00:21.70]line 2\\n[00:27.81]line
+        3\\n[00:32.64]line 4\\n[00:39.70]line 5\\n[00:45.84]line 6\\n[00:51.92]line
+        7\\n[00:56.57]line 8\\n[01:02.31]line 9\\n[01:08.44]line 10\\n[01:14.03]line
+        11\\n[01:18.53]line 12\\n[01:26.42]line 13\\n[01:31.44]line 14\\n[01:37.58]line
+        15\\n[01:42.00]line 16\\n[01:45.38]line 17\\n[01:52.38]line 18\\n[01:56.05]line
+        19\\n[02:02.04]line 20\\n[02:06.49]line 21\\n[02:09.44]line 22\\n[02:14.12]line
+        23\\n[02:19.57]line 24\\n[02:29.29]line 25\\n[02:35.45]line 26\\n[02:41.32]line
+        27\\n[02:45.92]line 28\\n[02:51.54]line 29\\n[02:57.78]line 30\\n[03:03.44]line
+        31\\n[03:07.98]line 32\\n[03:15.64]line 33\\n[03:21.04]line 34\\n[03:27.19]line
+        35\\n[03:31.69]line 36\\n[03:34.55]line 37\\n[03:41.74]line 38\\n[03:45.21]line
+        39\\n[03:51.23]line 40\\n[03:55.86]line 41\\n[03:58.85]line 42\\n[04:03.52]line
+        43\\n[04:06.45]line 44\\n[04:10.63]line 45\", \"lyricsfile\": \"scrubbed\"},
+        {\"id\": 17792853, \"name\": \"\u5C0F\u5E78\u904B\", \"trackName\": \"\u5C0F\u5E78\u904B\",
+        \"artistName\": \"Hebe Tien \u7530\u99A5\u7504\", \"albumName\": \"\u5C0F\u5E78\u904B\",
+        \"duration\": 265.521633, \"instrumental\": false, \"hasWordSync\": false,
+        \"plainLyrics\": \"line 1\\nline 2\\nline 3\\nline 4\\nline 5\\nline 6\\nline
+        7\\nline 8\\nline 9\\nline 10\\nline 11\\nline 12\\nline 13\\nline 14\\nline
+        15\\nline 16\\nline 17\\nline 18\\nline 19\\nline 20\\nline 21\\nline 22\\nline
+        23\\nline 24\\nline 25\\nline 26\\nline 27\\nline 28\\nline 29\\nline 30\\nline
+        31\\nline 32\\nline 33\\nline 34\\nline 35\\nline 36\", \"syncedLyrics\":
+        \"[00:15.63]line 1\\n[00:21.44]line 2\\n[00:27.60]line 3\\n[00:32.68]line
+        4\\n[00:39.84]line 5\\n[00:45.99]line 6\\n[00:52.03]line 7\\n[00:56.58]line
+        8\\n[01:02.31]line 9\\n[01:08.46]line 10\\n[01:14.05]line 11\\n[01:18.66]line
+        12\\n[01:26.22]line 13\\n[01:31.55]line 14\\n[01:37.63]line 15\\n[01:45.22]line
+        16\\n[01:52.54]line 17\\n[01:55.80]line 18\\n[02:01.90]line 19\\n[02:09.51]line
+        20\\n[02:18.81]line 21\\n[02:29.12]line 22\\n[02:35.33]line 23\\n[02:41.39]line
+        24\\n[02:45.88]line 25\\n[02:51.67]line 26\\n[02:57.75]line 27\\n[03:03.40]line
+        28\\n[03:08.03]line 29\\n[03:15.64]line 30\\n[03:20.96]line 31\\n[03:27.09]line
+        32\\n[03:34.68]line 33\\n[03:41.80]line 34\\n[03:45.29]line 35\\n[03:51.26]line
+        36\\n[03:58.84]line 37\\n[04:09.79]line 38\", \"lyricsfile\": \"scrubbed\"}]"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - retry-after
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a46a6a6d7c84fe8e-SIN
+      connection:
+      - keep-alive
+      content-length:
+      - '28954'
+      content-type:
+      - application/json
+      date:
+      - Wed, 07 Oct 2026 05:13:17 GMT
+      nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      report-to:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=L4ykv%2BpkWMNX0DikW1uZiF%2BVfjTtCuYTJaCS4r4%2B1d%2B4vrQvoU9xecQPbMx5%2B03EzpXEI69gTso%2FqigcUiqJiN6FTCRkJSa7V5xJxA8HB2U7dF02mGJXUoXU5pnJ"}]}'
+      server:
+      - cloudflare
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      - origin, access-control-request-method, access-control-request-headers
+    status:
+      code: 200
+      message: OK
+version: 1
