@@ -3,6 +3,9 @@
 The subprocess gets the lowest CPU priority and a few threads, starts only
 when enough memory is free, and the recording is deleted whatever happens.
 Results come back on the Qt thread as signals.
+
+The models are prepared first, the only worker run that may go online; jobs wait
+until they are in models_dir and then run offline (SPEC v1.85).
 """
 
 from __future__ import annotations
@@ -26,10 +29,12 @@ from lyricfloat.models import LyricLine
 
 log = logging.getLogger(__name__)
 
+MODEL = "base"  # Whisper (SPEC v1.84)
 THREADS = 4
 MIN_FREE_BYTES = 3 * 2**30
 RETRY_MS = 60_000  # memory was short: look again in a minute
 TIMEOUT_S = 20 * 60
+PREPARE_TIMEOUT_S = 60 * 60  # the first download of the models, about 220 MB
 NEEDED_MODULES = ("torch", "demucs", "stable_whisper", "faster_whisper", "julius")
 IDLE_PRIORITY_CLASS = 0x00000040
 CREATE_NO_WINDOW = 0x08000000
@@ -53,6 +58,7 @@ class AlignOutcome:
     timings: dict = field(default_factory=dict)
     error: str = ""
     wall_s: float = 0.0
+    models_missing: bool = False  # the models were gone from models_dir (SPEC v1.85)
 
 
 def source_runtime() -> Path | None:
@@ -98,7 +104,7 @@ def run_worker(python: Path, job: dict, worker: Path = WORKER, timeout: float = 
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         creationflags=IDLE_PRIORITY_CLASS | CREATE_NO_WINDOW,
-        env=worker_env(),
+        env=worker_env(online=bool(job.get("prepare"))),
     )
     if on_start is not None:
         on_start(proc)
@@ -117,28 +123,42 @@ def run_worker(python: Path, job: dict, worker: Path = WORKER, timeout: float = 
         return {"ok": False, "error": "unreadable worker output"}
 
 
-def worker_env() -> dict:
+def worker_env(online: bool = False) -> dict:
+    """Only the prepare job is online (SPEC v1.85); no run sends the user's Hugging Face token."""
     import os
 
-    return {**os.environ, "TQDM_DISABLE": "1", "PYTHONWARNINGS": "ignore", "HF_HUB_DISABLE_PROGRESS_BARS": "1"}
+    env = {**os.environ, "TQDM_DISABLE": "1", "PYTHONWARNINGS": "ignore", "HF_HUB_DISABLE_PROGRESS_BARS": "1",
+           "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1"}
+    if online:
+        for key in ("HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE"):  # the user's own setting would stop the download
+            env.pop(key, None)
+    else:
+        env["HF_HUB_OFFLINE"] = "1"
+    return env
 
 
 class AlignRunner(QObject):
     finished = pyqtSignal(object)  # AlignOutcome
+    prepared = pyqtSignal(bool, bool, str)  # models ready, any downloaded, error (SPEC v1.85)
     _done = pyqtSignal(object)  # from the worker thread
+    _prepare_done = pyqtSignal(object)  # from the prepare thread
 
     def __init__(self, models_dir: Path, python: Path | None = None, worker: Path = WORKER, parent: QObject | None = None) -> None:
         super().__init__(parent)
         self.models_dir = models_dir
         self.python = python
         self.worker = worker
+        self.models_ready = False  # the prepare job found the models in models_dir
+        self.preparing = False
         self._queue: deque[AlignJob] = deque()
         self._busy: AlignJob | None = None
         self._retry = QTimer(self, singleShot=True, interval=RETRY_MS)
         self._retry.timeout.connect(self._next)
         self._done.connect(self._on_done)
+        self._prepare_done.connect(self._on_prepared)
         self.free_memory = free_memory  # replaceable in tests
         self._proc: subprocess.Popen | None = None
+        self._prepare_proc: subprocess.Popen | None = None
 
     @property
     def pending(self) -> int:
@@ -148,18 +168,48 @@ class AlignRunner(QObject):
         self._queue.append(job)
         self._next()
 
+    def prepare(self) -> None:
+        """Make sure the models are in models_dir, downloading what is missing (SPEC v1.85): the
+        only worker run that goes online. Offline and quick when they are all there."""
+        if self.preparing or self.python is None:
+            return
+        self.preparing = True
+        threading.Thread(target=self._prepare, name="l3-prepare", daemon=True).start()
+
     def clear(self) -> None:
-        """Drop queued jobs (L3 turned off, quitting); a running one finishes and is discarded."""
+        """Drop queued jobs (L3 turned off, quitting); a running one finishes and is discarded,
+        and a model download finishes."""
         while self._queue:
             _delete(self._queue.popleft().recording.path)
         self._retry.stop()
 
     def shutdown(self) -> None:
-        """Quitting: drop the queue and stop a running worker (its recording is deleted by its thread)."""
+        """Quitting: drop the queue and stop the workers (a job's recording is deleted by its thread)."""
         self.clear()
-        proc = self._proc
-        if proc is not None and proc.poll() is None:
-            proc.kill()
+        _kill(self._proc)
+        _kill(self._prepare_proc)
+
+    def _prepare(self) -> None:
+        request = {"prepare": True, "model": MODEL, "models_dir": str(self.models_dir)}
+        try:
+            result = run_worker(self.python, request, self.worker, PREPARE_TIMEOUT_S, lambda p: setattr(self, "_prepare_proc", p))
+        except OSError as exc:
+            result = {"ok": False, "error": f"could not start the worker: {exc}"}
+        finally:
+            self._prepare_proc = None
+        self._prepare_done.emit(result)
+
+    def _on_prepared(self, result: dict) -> None:
+        self.preparing = False
+        self.models_ready = bool(result.get("ok"))
+        downloaded = result.get("downloaded") or []
+        if not self.models_ready:
+            log.warning("L3 models not ready: %s", result.get("error", ""))
+            self.clear()  # the recordings waiting for them cannot be aligned
+        elif downloaded:
+            log.info("L3 models downloaded: %s", ", ".join(downloaded))
+        self.prepared.emit(self.models_ready, bool(downloaded), result.get("error", ""))
+        self._next()
 
     def _next(self) -> None:
         if self._busy is not None or not self._queue:
@@ -168,6 +218,8 @@ class AlignRunner(QObject):
             log.info("L3 runtime not available; %d recording(s) dropped", len(self._queue))
             self.clear()
             return
+        if not self.models_ready:
+            return  # waits for the models to be prepared (SPEC v1.85)
         if self.free_memory() < MIN_FREE_BYTES:
             log.info("L3 waiting: less than %d GB of memory free", MIN_FREE_BYTES // 2**30)
             self._retry.start()
@@ -183,7 +235,7 @@ class AlignRunner(QObject):
             "channels": rec.channels,
             "lines": list(job.texts),
             "language": job.language,
-            "model": "base",
+            "model": MODEL,
             "threads": THREADS,
             "models_dir": str(self.models_dir),
         }
@@ -199,18 +251,26 @@ class AlignRunner(QObject):
             _delete(rec.path)  # SPEC: the recording goes as soon as alignment is done
         wall = time.perf_counter() - t0
         outcome = AlignOutcome(
-            job, bool(result.get("ok")), result.get("segments") or [], result.get("timings") or {}, result.get("error", ""), wall
+            job, bool(result.get("ok")), result.get("segments") or [], result.get("timings") or {}, result.get("error", ""), wall,
+            bool(result.get("models_missing")),
         )
         self._done.emit(outcome)
 
     def _on_done(self, outcome: AlignOutcome) -> None:
         self._busy = None
+        if outcome.models_missing:
+            self.models_ready = False  # later jobs wait until the models are prepared again
         if outcome.ok:
             log.info("L3 aligned %s in %.0fs", outcome.job.recording.track.describe(), outcome.wall_s)
         else:
             log.warning("L3 failed for %s: %s", outcome.job.recording.track.describe(), outcome.error)
         self.finished.emit(outcome)
         self._next()
+
+
+def _kill(proc: subprocess.Popen | None) -> None:
+    if proc is not None and proc.poll() is None:
+        proc.kill()
 
 
 def _delete(path: Path) -> None:

@@ -237,6 +237,16 @@ def test_a_worker_that_dies_counts_as_a_miss(finder):
     assert finder.events[-2] == ("missed",)
 
 
+def test_models_gone_from_the_cache_end_the_search_quietly_and_are_reported(finder):
+    """SPEC v1.85: the worker does not download them; nothing was searched, so it is not a miss."""
+    missing = []
+    finder.modelsMissing.connect(lambda: missing.append(True))
+    finder.start(TRACK, SEARCH, recording(finder.clock))
+    finder.servings[0].on_reply({"ok": False, "error": "ModelsMissing: Whisper base is not in models", "models_missing": True})
+    assert missing == [True] and not finder.active and finder.servings[0].closed
+    assert finder.events == [("searching", True), ("searching", False)]
+
+
 def test_no_search_without_runtime_or_memory(finder):
     finder.free_memory = lambda: 2**30
     assert not finder.start(TRACK, SEARCH, recording(finder.clock))

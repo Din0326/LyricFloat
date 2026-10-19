@@ -47,7 +47,7 @@ l2 = [
 # L3 spike (tools/l3_spike): vocal separation and forced alignment, on top of l2
 l3 = [
     "torch>=2.4",
-    "demucs>=4.0",
+    "demucs>=4.1",  # its models on Hugging Face (SPEC v1.85)
     "stable-ts>=2.17",
 ]
 

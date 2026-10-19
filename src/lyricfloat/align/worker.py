@@ -8,7 +8,8 @@ stdin, writes one JSON result on stdout:
              "threads", "models_dir", "offset_bytes"?, "length_bytes"?}
             or  {"prepare": true, "model", "models_dir"}
     result: {"ok": true, "segments": [{"start", "end", "words": [{"start", "end", "text", "p"}]}],
-             "timings": {...}}   or  {"ok": false, "error": "..."}
+             "timings": {...}}   or  {"ok": false, "error": "...", "models_missing"?: true}
+            prepare: {"ok": true, "downloaded": [names]}
 
 `offset_bytes` and `length_bytes` take a part of the recording (SPEC v1.36: an MV's
 intro is skipped, and clips are read from a recording still being written).
@@ -16,6 +17,10 @@ intro is skipped, and clips are read from a recording still being written).
 {"serve": true, "model", "threads", "models_dir"} keeps the models loaded instead:
 the worker answers {"ok": true, "ready": true}, then one result line per job line
 until stdin closes (SPEC v1.36, finding an MV's singing start while it plays).
+
+Only the prepare job goes online (SPEC v1.85): it downloads the models missing from
+models_dir. Every other run reads them from there alone and answers "models_missing"
+when one is gone.
 
 The PCM file is only read here; the app deletes it afterwards.
 """
@@ -27,18 +32,66 @@ import os
 import sys
 import time
 
+# Models pinned to Hugging Face commits, like the runtime's packages (SPEC v1.85): the ones
+# measured since 2026-10-07, still the latest on 2026-10-19.
+WHISPER_REVISIONS = {"base": "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66"}  # Systran/faster-whisper-<model>
+DEMUCS = ("adefossez/HTDemucs", "htdemucs", "cbc8a9b1a87023b7fd74e7b3412e6321c0eab003")  # repo, bag, commit
+
+
+class ModelsMissing(Exception):
+    """A model is not in models_dir, and this run may not download it."""
+
+
+def fetch_models(job: dict, online: bool = False) -> dict:
+    """The models' files in models_dir. Offline (every run but prepare) a missing model raises
+    ModelsMissing; online, what is missing is downloaded, never with the user's token."""
+    import yaml
+    from faster_whisper.utils import download_model
+    from huggingface_hub import hf_hub_download
+    from huggingface_hub.errors import LocalEntryNotFoundError
+
+    cache = job["models_dir"]
+    downloaded: list[str] = []
+
+    def local_or_download(name: str, get):
+        try:
+            return get(True)
+        except LocalEntryNotFoundError as exc:
+            if not online:
+                raise ModelsMissing(f"{name} is not in the models folder") from exc
+        downloaded.append(name)
+        return get(False)
+
+    model = job.get("model", "base")
+    whisper = local_or_download(f"Whisper {model}", lambda local: download_model(
+        model, cache_dir=cache, revision=WHISPER_REVISIONS.get(model), local_files_only=local, use_auth_token=False))
+    repo, bag_name, revision = DEMUCS
+
+    def demucs_file(filename: str) -> str:
+        return local_or_download(f"Demucs {filename}", lambda local: hf_hub_download(
+            repo, filename, revision=revision, cache_dir=cache, local_files_only=local, token=False))
+
+    with open(demucs_file(f"{bag_name}.yaml"), encoding="utf-8") as f:
+        bag = yaml.safe_load(f)
+    weights = [demucs_file(f"{sig}.safetensors") for sig in bag["models"]]
+    return {"whisper": whisper, "demucs_bag": bag, "demucs_weights": weights, "downloaded": downloaded}
+
 
 def _load_models(job: dict):
+    """From models_dir only (SPEC v1.85). Demucs is put together the way its own Hugging Face
+    loader does, without that loader's unpinned lookup and its fallback download."""
     import torch
-    from demucs.pretrained import get_model
+    from demucs.apply import BagOfModels
+    from demucs.hf import load_safetensors_model
     import stable_whisper
 
-    torch.set_num_threads(max(1, int(job.get("threads") or 2)))
-    separator = get_model("htdemucs")
+    threads = max(1, int(job.get("threads") or 2))
+    torch.set_num_threads(threads)
+    files = fetch_models(job)
+    bag = files["demucs_bag"]
+    separator = BagOfModels([load_safetensors_model(path) for path in files["demucs_weights"]], bag.get("weights"), bag.get("segment"))
     separator.eval()
-    whisper = stable_whisper.load_faster_whisper(
-        job.get("model", "base"), device="cpu", compute_type="int8", download_root=job["models_dir"], cpu_threads=max(1, int(job.get("threads") or 2))
-    )
+    whisper = stable_whisper.load_faster_whisper(files["whisper"], device="cpu", compute_type="int8", cpu_threads=threads)
     return separator, whisper
 
 
@@ -140,11 +193,18 @@ def split_by_lines(lines: list[str], words: list[dict]) -> list[dict]:
     return out
 
 
+def _failure(exc: Exception) -> dict:
+    result = {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+    if isinstance(exc, ModelsMissing):
+        result["models_missing"] = True  # the app prepares the models again (SPEC v1.85)
+    return result
+
+
 def _attempt(run, *args) -> dict:
     try:
         return run(*args)
     except Exception as exc:  # reported to the app, which logs it and moves on
-        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+        return _failure(exc)
 
 
 def serve(job: dict, read_line, write_line, load=_load_models, run=align) -> None:
@@ -152,7 +212,7 @@ def serve(job: dict, read_line, write_line, load=_load_models, run=align) -> Non
     try:
         models = load(job)
     except Exception as exc:
-        write_line({"ok": False, "error": f"{type(exc).__name__}: {exc}"})
+        write_line(_failure(exc))
         return
     write_line({"ok": True, "ready": True})
     while True:
@@ -181,8 +241,7 @@ def main() -> None:
     if job.get("prepare"):
 
         def prepare(j: dict) -> dict:
-            _load_models(j)  # downloads the models on first use
-            return {"ok": True}
+            return {"ok": True, "downloaded": fetch_models(j, online=True)["downloaded"]}
 
         result = _attempt(prepare, job)
     else:

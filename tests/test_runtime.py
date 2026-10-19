@@ -121,15 +121,23 @@ class Runner:
 
         class Sig(QObject):
             finished = pyqtSignal(object)
+            prepared = pyqtSignal(bool, bool, str)
 
         self._sig = Sig()
         self.finished = self._sig.finished
+        self.prepared = self._sig.prepared
         self.python = None
         self.worker = None
         self.models_dir = None
+        self.models_ready = False
+        self.preparing = False
+        self.prepares = 0
 
     def clear(self):
         pass
+
+    def prepare(self):
+        self.prepares += 1
 
 
 class Recorder:
@@ -168,8 +176,11 @@ def test_portable_build_installs_the_runtime_when_turned_on(app, tmp_path):
     assert c.status_text() == STATUS_DOWNLOAD
     c.set_enabled(True)
     assert wait_for(app, lambda: c.runtime_ready)
-    assert c.runner.worker == tmp_path / "worker.py" and c.status_text() == STATUS_READY
-    assert "下載執行環境" in notices[0] and "已就緒" in notices[-1]
+    assert c.runner.worker == tmp_path / "worker.py"
+    assert "下載執行環境" in notices[0] and "已就緒" in notices[-1] and "下載模型" in notices[-1]
+    assert c.runner.prepares == 1  # the models next (SPEC v1.85)
+    c.runner.models_ready = True
+    assert c.status_text() == STATUS_READY
 
 
 def test_a_failed_runtime_install_is_reported(app, tmp_path):

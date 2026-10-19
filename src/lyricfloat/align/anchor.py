@@ -28,7 +28,7 @@ from PyQt6.QtCore import QObject, QTimer, pyqtSignal
 
 from lyricfloat.align.apply import language_of
 from lyricfloat.align.recorder import LiveRecording
-from lyricfloat.align.runner import free_memory, worker_env
+from lyricfloat.align.runner import MODEL, free_memory, worker_env
 from lyricfloat.lyrics.lrc import first_sung_line
 from lyricfloat.models import LyricLine, TrackInfo
 
@@ -133,7 +133,8 @@ def plan_search(lines: Sequence[LyricLine], title: str, artist: str, gap: float,
 
 
 class Serving:
-    """A worker in serve mode: requests go in on stdin, replies come back on a reader thread."""
+    """A worker in serve mode: requests go in on stdin, replies come back on a reader thread.
+    It reads the models from models_dir only (SPEC v1.85)."""
 
     def __init__(self, python: Path, worker: Path, models_dir: Path, on_reply: Callable[[dict], None]) -> None:
         self.on_reply = on_reply
@@ -143,9 +144,9 @@ class Serving:
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
             creationflags=IDLE_PRIORITY_CLASS | CREATE_NO_WINDOW,
-            env=worker_env(),
+            env=worker_env(online=False),
         )
-        self.send({"serve": True, "model": "base", "threads": THREADS, "models_dir": str(models_dir)})
+        self.send({"serve": True, "model": MODEL, "threads": THREADS, "models_dir": str(models_dir)})
         threading.Thread(target=self._read, name="l3-start-finder", daemon=True).start()
 
     def _read(self) -> None:
@@ -174,6 +175,7 @@ class StartFinder(QObject):
     found = pyqtSignal(object, float)  # track, offset of the source times
     searching = pyqtSignal(object, bool)  # track, whether a search is running (for the corner hint)
     missed = pyqtSignal(object)  # track: the believable start went by without a sure clip
+    modelsMissing = pyqtSignal()  # the worker found the models gone from models_dir (SPEC v1.85)
     _reply = pyqtSignal(object)
 
     def __init__(
@@ -271,6 +273,11 @@ class StartFinder(QObject):
         if reply.get("ready"):
             self._ready = True
             self.tick()
+            return
+        if reply.get("models_missing"):
+            log.warning("start search: %s", reply.get("error", ""))
+            self._finish(None)  # nothing was searched: not a miss
+            self.modelsMissing.emit()
             return
         if reply.get("gone") or (not reply.get("ok") and not self._ready):
             log.warning("start search: worker failed: %s", reply.get("error", ""))

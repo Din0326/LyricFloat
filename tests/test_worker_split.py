@@ -2,6 +2,9 @@
 
 import json
 import sqlite3
+from pathlib import Path
+
+import pytest
 
 from lyricfloat.align.recorder import reason_key
 from lyricfloat.align.worker import split_by_lines
@@ -168,3 +171,106 @@ def test_an_old_worker_copy_in_the_runtime_is_replaced(tmp_path):
     assert copy.read_bytes() == WORKER.read_bytes()
     (tmp_path / WORKER.name).unlink()
     assert worker_for(python) == WORKER  # no runtime copy: the package's own
+
+
+# -- models: prepared once, then offline (SPEC v1.85) -------------------------------------
+
+
+def test_serve_reports_models_gone_from_the_cache():
+    from lyricfloat.align.worker import ModelsMissing, serve
+
+    written = []
+
+    def load(job):
+        raise ModelsMissing("Whisper base is not in models")
+
+    serve({"serve": True}, lambda: "", written.append, load=load)
+    assert written == [{"ok": False, "error": "ModelsMissing: Whisper base is not in models", "models_missing": True}]
+
+
+@pytest.fixture
+def no_network(monkeypatch):
+    import socket
+
+    def refuse(*args, **kwargs):
+        raise AssertionError("went online")
+
+    monkeypatch.setattr(socket.socket, "connect", refuse)
+    monkeypatch.setattr(socket, "create_connection", refuse)
+
+
+def cached_models(models_dir, whisper=True, demucs=True):
+    """The Hugging Face cache layout of the pinned models, with stand-in files."""
+    from lyricfloat.align.worker import DEMUCS, WHISPER_REVISIONS
+
+    if whisper:
+        snap = models_dir / "models--Systran--faster-whisper-base" / "snapshots" / WHISPER_REVISIONS["base"]
+        snap.mkdir(parents=True)
+        for name in ("config.json", "model.bin", "tokenizer.json", "vocabulary.txt"):
+            (snap / name).write_text("x", encoding="utf-8")
+    if demucs:
+        snap = models_dir / "models--adefossez--HTDemucs" / "snapshots" / DEMUCS[2]
+        snap.mkdir(parents=True)
+        (snap / "htdemucs.yaml").write_text("models: ['955717e8']\n", encoding="utf-8")
+        (snap / "955717e8.safetensors").write_bytes(b"x")
+
+
+def test_offline_the_models_come_from_models_dir_alone(tmp_path, no_network):
+    pytest.importorskip("faster_whisper")
+    from lyricfloat.align.worker import fetch_models
+
+    cached_models(tmp_path)
+    files = fetch_models({"model": "base", "models_dir": str(tmp_path)})
+    assert Path(files["whisper"]).name == "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66"
+    assert [Path(p).name for p in files["demucs_weights"]] == ["955717e8.safetensors"]
+    assert files["demucs_bag"] == {"models": ["955717e8"]} and files["downloaded"] == []
+
+
+@pytest.mark.parametrize("whisper, demucs, missing", [(False, False, "Whisper base"), (True, False, "Demucs htdemucs.yaml")])
+def test_offline_a_missing_model_is_reported_not_downloaded(tmp_path, no_network, whisper, demucs, missing):
+    pytest.importorskip("faster_whisper")
+    from lyricfloat.align.worker import _attempt, fetch_models
+
+    cached_models(tmp_path, whisper, demucs)
+    result = _attempt(fetch_models, {"model": "base", "models_dir": str(tmp_path)})
+    assert result["models_missing"] and not result["ok"] and missing in result["error"]
+
+
+def test_prepare_downloads_only_what_is_missing_at_the_pinned_commits_without_a_token(tmp_path, monkeypatch):
+    pytest.importorskip("faster_whisper")
+    import faster_whisper.utils
+    import huggingface_hub
+    from huggingface_hub.errors import LocalEntryNotFoundError
+
+    from lyricfloat.align.worker import fetch_models
+
+    cached_models(tmp_path, demucs=False)  # an install from before v1.85: Demucs sat in the user's own cache
+    calls = []
+    real_download_model = faster_whisper.utils.download_model
+
+    def download_model(model, **kwargs):
+        calls.append(("whisper", kwargs["local_files_only"], kwargs["revision"], kwargs["use_auth_token"]))
+        assert kwargs["local_files_only"], "Whisper base is there: nothing to download"
+        return real_download_model(model, **kwargs)
+
+    def hf_hub_download(repo, filename, **kwargs):
+        calls.append((filename, kwargs["local_files_only"], kwargs["revision"], kwargs["token"]))
+        if kwargs["local_files_only"]:
+            raise LocalEntryNotFoundError("not cached")
+        path = tmp_path / "downloaded" / filename
+        path.parent.mkdir(exist_ok=True)
+        path.write_text("models: ['955717e8']\n" if filename.endswith(".yaml") else "x", encoding="utf-8")
+        return str(path)
+
+    monkeypatch.setattr(faster_whisper.utils, "download_model", download_model)
+    monkeypatch.setattr(huggingface_hub, "hf_hub_download", hf_hub_download)
+    files = fetch_models({"model": "base", "models_dir": str(tmp_path)}, online=True)
+    demucs_commit = "cbc8a9b1a87023b7fd74e7b3412e6321c0eab003"
+    assert calls == [
+        ("whisper", True, "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66", False),
+        ("htdemucs.yaml", True, demucs_commit, False),
+        ("htdemucs.yaml", False, demucs_commit, False),
+        ("955717e8.safetensors", True, demucs_commit, False),
+        ("955717e8.safetensors", False, demucs_commit, False),
+    ]
+    assert files["downloaded"] == ["Demucs htdemucs.yaml", "Demucs 955717e8.safetensors"]

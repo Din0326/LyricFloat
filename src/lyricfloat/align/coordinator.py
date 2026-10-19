@@ -1,7 +1,8 @@
 """L3 coordinator (FR-21): decides which plays to record, queues the alignment, stores
 the outcome. The controller only forwards playback events to it.
 
-A play is recorded when L3 is on, the runtime is there, and the song has synced
+A play is recorded when L3 is on, the runtime and the models are there (the models are
+prepared each time L3 is turned on, SPEC v1.85), and the song has synced
 lyrics that the user has not bound, edited or offset, and no alignment yet (or
 only failed ones). Plain lyrics and versions of another length (an MV) are
 recorded even when bound or cued. Recording starts within the song's first 15 s.
@@ -38,6 +39,8 @@ STATUS_READY = "推論環境已就緒。"
 STATUS_SOURCE_MISSING = "這個 Python 環境沒有安裝推論套件：在專案資料夾執行 pip install -e \".[l2,l3]\" 後重開 LyricFloat。"
 STATUS_DOWNLOAD = "開啟後會先在背景下載執行環境（約 250 MB，安裝後約 1 GB）。"
 STATUS_INSTALLING = "正在下載並安裝執行環境…"
+STATUS_PREPARING = "正在準備模型（第一次需下載約 220 MB）…"
+STATUS_MODELS_FAILED = "模型下載失敗，自動時間軸校正暫停：關掉再開啟即可重試。"
 TRIM_LEAD = 5.0  # seconds kept before an MV's known singing start when aligning the whole song (SPEC v1.36)
 
 
@@ -83,17 +86,26 @@ class L3Coordinator(QObject):
         self.finder.found.connect(self.startFound)
         self.finder.searching.connect(self.startSearching)
         self.finder.missed.connect(self.startMissed)
+        self.finder.modelsMissing.connect(self._models_missing)
         recorder.recorded.connect(self.on_recorded)
         recorder.dropped.connect(self._log_dropped)
         runner.finished.connect(self.on_aligned)
+        runner.prepared.connect(self._on_prepared)
 
     @property
     def runtime_ready(self) -> bool:
         return self.runner.python is not None
 
+    @property
+    def ready(self) -> bool:
+        """The runtime and the models are there: plays can be recorded (SPEC v1.85)."""
+        return self.runtime_ready and self.runner.models_ready
+
     def status_text(self) -> str:
         if self.runtime_ready:
-            return STATUS_READY
+            if self.runner.preparing:
+                return STATUS_PREPARING
+            return STATUS_MODELS_FAILED if self.enabled and not self.runner.models_ready else STATUS_READY
         if self.installing:
             return STATUS_INSTALLING
         return STATUS_DOWNLOAD if self.frozen and self.runtime_root is not None else STATUS_SOURCE_MISSING
@@ -104,8 +116,11 @@ class L3Coordinator(QObject):
             self.finder.stop()
             self.recorder.cancel()
             self.runner.clear()
-        elif not self.runtime_ready and self.frozen and self.runtime_root is not None:
-            self.install_runtime()
+        elif not self.runtime_ready:
+            if self.frozen and self.runtime_root is not None:
+                self.install_runtime()
+        else:
+            self.runner.prepare()  # SPEC v1.85: offline unless a model is missing
         log.info("L3 %s (runtime %s)", "on" if on else "off", "ready" if self.runtime_ready else "missing")
 
     # -- portable runtime (SPEC v1.21) ----------------------------------------------
@@ -137,7 +152,27 @@ class L3Coordinator(QObject):
             return
         self.runner.python = self.finder.python = python
         self.runner.worker = self.finder.worker = worker_for(python)
-        self.notice.emit("自動時間軸校正", "執行環境已就緒，之後完整聽完的歌會在背景自動校正。")
+        self.notice.emit("自動時間軸校正", "執行環境已就緒，接著下載模型（約 220 MB）。")
+        if self.enabled:
+            self.runner.prepare()
+
+    # -- models (SPEC v1.85) --------------------------------------------------------
+
+    def _on_prepared(self, ok: bool, downloaded: bool, error: str) -> None:
+        if not self.enabled:  # turned off while the models were prepared
+            return
+        if not ok:
+            reason = (error.strip().splitlines() or ["unknown error"])[0][:200]
+            self.notice.emit("自動時間軸校正", f"模型下載失敗：{reason}\n可以在設定關掉再開啟重試。")
+        elif downloaded:
+            self.notice.emit("自動時間軸校正", "模型已就緒，之後完整聽完的歌會在背景自動校正。")
+
+    def _models_missing(self) -> None:
+        """A worker found the models gone from models_dir (deleted): prepare them again, never
+        download them in the middle of a job."""
+        self.runner.models_ready = False
+        if self.enabled:
+            self.runner.prepare()
 
     # -- playback events ------------------------------------------------------------
 
@@ -198,7 +233,7 @@ class L3Coordinator(QObject):
         lyrics = result.lyrics
         return (
             self.enabled
-            and self.runtime_ready
+            and self.ready
             and bool(self._app_id)
             and result.kind in (ResultKind.SYNCED, ResultKind.PLAIN_ONLY)
             and lyrics is not None
@@ -232,6 +267,8 @@ class L3Coordinator(QObject):
         self.runner.submit(AlignJob(recording, lines, texts, language, skip))
 
     def on_aligned(self, outcome: AlignOutcome) -> None:
+        if outcome.models_missing:
+            self._models_missing()  # the song itself counts as an ordinary failure below
         spawn(self._store(outcome))
 
     async def _store(self, outcome: AlignOutcome) -> None:

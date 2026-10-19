@@ -9,7 +9,13 @@ import pytest
 from PyQt6.QtCore import QObject, pyqtSignal
 from PyQt6.QtWidgets import QApplication
 
-from lyricfloat.align.coordinator import STATUS_READY, STATUS_SOURCE_MISSING, L3Coordinator
+from lyricfloat.align.coordinator import (
+    STATUS_MODELS_FAILED,
+    STATUS_PREPARING,
+    STATUS_READY,
+    STATUS_SOURCE_MISSING,
+    L3Coordinator,
+)
 from lyricfloat.align.recorder import Recording
 from lyricfloat.align.runner import AlignOutcome
 from lyricfloat.lyrics.cache import L3_APPLIED, L3_FAILED, L3_REVERTED
@@ -59,17 +65,29 @@ class FakeRecorder(QObject):
 
 class FakeRunner(QObject):
     finished = pyqtSignal(object)
+    prepared = pyqtSignal(bool, bool, str)
 
-    def __init__(self, python=Path("python.exe")):
+    def __init__(self, python=Path("python.exe"), models_ready=True):
         super().__init__()
         self.python = python
         self.worker = Path("worker.py")
         self.models_dir = Path("models")
+        self.models_ready = models_ready
+        self.preparing = False
+        self.prepares = 0
         self.jobs = []
         self.cleared = 0
 
     def submit(self, job):
         self.jobs.append(job)
+
+    def prepare(self):
+        self.prepares += 1
+        self.preparing = True
+
+    def finish_preparing(self, ok, downloaded=False, error=""):
+        self.preparing, self.models_ready = False, ok
+        self.prepared.emit(ok, downloaded, error)
 
     def clear(self):
         self.cleared += 1
@@ -84,6 +102,7 @@ class FakeFinder(QObject):
     found = pyqtSignal(object, float)
     searching = pyqtSignal(object, bool)
     missed = pyqtSignal(object)
+    modelsMissing = pyqtSignal()
 
     def __init__(self):
         super().__init__()
@@ -255,6 +274,65 @@ async def test_outcomes_are_stored_or_counted_as_failures(l3, tmp_path):
     for _ in range(5):
         await asyncio.sleep(0)
     assert l3.service.stored[0][2:] == (0.4, 199.0) and l3.service.failed == [TRACK]
+
+
+# -- models (SPEC v1.85) ---------------------------------------------------------
+
+
+def test_turning_l3_on_prepares_the_models_before_anything_is_recorded(qapp):
+    c = L3Coordinator(FakeService(), FakeRecorder(), FakeRunner(models_ready=False), finder=FakeFinder())
+    notices = []
+    c.notice.connect(lambda title, text: notices.append(text))
+    c.set_enabled(True)
+    c.on_session("Spotify.exe")
+    c.on_anchor(PlaybackAnchor(1.0, time.monotonic(), True))
+    assert c.runner.prepares == 1 and c.status_text() == STATUS_PREPARING
+    c.on_result(synced())
+    assert c.recorder.calls == [] and c.finder.calls == []
+    c.runner.finish_preparing(True, downloaded=True)
+    assert "模型已就緒" in notices[-1] and c.status_text() == STATUS_READY
+    c.on_result(synced())
+    assert c.recorder.calls == [("start", TRACK.title, "Spotify.exe")]
+
+
+def test_models_already_there_are_checked_quietly(l3):
+    notices = []
+    l3.notice.connect(lambda title, text: notices.append(text))
+    assert l3.runner.prepares == 1  # every time L3 is turned on: offline when nothing is missing
+    l3.runner.finish_preparing(True)
+    assert notices == []
+
+
+def test_a_failed_prepare_is_reported_and_pauses_l3(qapp):
+    c = L3Coordinator(FakeService(), FakeRecorder(), FakeRunner(models_ready=False), finder=FakeFinder())
+    notices = []
+    c.notice.connect(lambda title, text: notices.append(text))
+    c.set_enabled(True)
+    c.runner.finish_preparing(False, error="LocalEntryNotFoundError: no connection\nmore detail")
+    assert notices == ["模型下載失敗：LocalEntryNotFoundError: no connection\n可以在設定關掉再開啟重試。"]
+    assert c.status_text() == STATUS_MODELS_FAILED
+    c.set_enabled(False)
+    c.runner.finish_preparing(False, error="exit code 1")  # a download that ended after L3 was turned off
+    assert len(notices) == 1 and c.status_text() == STATUS_READY
+
+
+async def test_models_gone_count_as_a_failure_and_are_prepared_again(l3, tmp_path):
+    l3.on_result(synced())
+    l3.recorder.recorded.emit(Recording(TRACK, tmp_path / "rec.pcm", 0.4, 199.0))
+    job = l3.runner.jobs[0]
+    l3.runner.finished.emit(AlignOutcome(job, False, error="ModelsMissing: Whisper base is not in models", models_missing=True))
+    for _ in range(5):
+        await asyncio.sleep(0)
+    assert l3.service.failed == [TRACK] and not l3.runner.models_ready and l3.runner.prepares == 2
+    l3.runner.finish_preparing(True)
+    l3.finder.modelsMissing.emit()  # the start finder's worker found them gone as well
+    assert not l3.runner.models_ready and l3.runner.prepares == 3
+
+
+def test_models_gone_while_l3_is_off_are_not_downloaded(l3):
+    l3.set_enabled(False)
+    l3.finder.modelsMissing.emit()
+    assert l3.runner.prepares == 1 and not l3.runner.models_ready
 
 
 # -- settings dialog -------------------------------------------------------------
